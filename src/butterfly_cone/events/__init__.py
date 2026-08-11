@@ -1,0 +1,123 @@
+"""Event-detection, microstring-tracing, and seed/incoming attribution machinery.
+
+Phase-2 instruments for PLAN_v2.1 sec 8.  Every threshold is provisional and
+configuration-driven; nothing is hardcoded, pending the advance-declaration freeze.
+"""
+
+from .config import (
+    MAJORITY_THETAS,
+    AttributionConfig,
+    CavitySpec,
+    ClusterConfig,
+    DisplacementConfig,
+    EventConfig,
+    HopConfig,
+    StringConfig,
+)
+from .trajectory import (
+    Trajectory,
+    minimum_image,
+    minimum_image_centroid,
+    mixing_diameter,
+    neighbor_pairs,
+    neighbor_sets,
+    radius_of_gyration,
+)
+from .displacements import (
+    cage_relative_displacement,
+    cage_relative_field,
+    magnitude_field,
+    overlap_indicator,
+    plain_displacement,
+)
+from .hops import (
+    HopEvent,
+    detect_hops,
+    detect_persistent,
+    detect_phop,
+    phop_statistic,
+)
+from .clusters import (
+    Event,
+    build_events,
+    is_persistent,
+    link_events,
+    persistent_events,
+)
+from .strings import (
+    StringPath,
+    string_crosses_boundary,
+    string_length_distribution,
+    trace_strings,
+)
+from .attribution import (
+    AttributionInput,
+    AttributionResult,
+    bond_breaking_onsets,
+    build_attribution_input,
+    classify,
+    classify_core_majority,
+    classify_first_entry,
+    classify_first_nucleus,
+    classify_material_core,
+    compare_conventions,
+    label_agreement,
+    neighbor_loss_field,
+    region_seed_spearman,
+    seed_propensity,
+    spearman_rho,
+    top_decile_overlap,
+)
+
+__all__ = [
+    "MAJORITY_THETAS",
+    "AttributionConfig",
+    "AttributionInput",
+    "AttributionResult",
+    "CavitySpec",
+    "ClusterConfig",
+    "DisplacementConfig",
+    "Event",
+    "EventConfig",
+    "HopConfig",
+    "HopEvent",
+    "StringConfig",
+    "StringPath",
+    "Trajectory",
+    "bond_breaking_onsets",
+    "build_attribution_input",
+    "build_events",
+    "cage_relative_displacement",
+    "cage_relative_field",
+    "classify",
+    "classify_core_majority",
+    "classify_first_entry",
+    "classify_first_nucleus",
+    "classify_material_core",
+    "compare_conventions",
+    "detect_hops",
+    "detect_persistent",
+    "detect_phop",
+    "is_persistent",
+    "label_agreement",
+    "link_events",
+    "magnitude_field",
+    "minimum_image",
+    "minimum_image_centroid",
+    "mixing_diameter",
+    "neighbor_loss_field",
+    "neighbor_pairs",
+    "neighbor_sets",
+    "overlap_indicator",
+    "persistent_events",
+    "phop_statistic",
+    "plain_displacement",
+    "radius_of_gyration",
+    "region_seed_spearman",
+    "seed_propensity",
+    "spearman_rho",
+    "string_crosses_boundary",
+    "string_length_distribution",
+    "top_decile_overlap",
+    "trace_strings",
+]

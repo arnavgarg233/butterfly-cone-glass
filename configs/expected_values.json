@@ -1,0 +1,513 @@
+{
+  "kind": "butterfly_cone_frozen_values",
+  "n_values": 101,
+  "schema_version": "1.0.0",
+  "statement": "The load-bearing numbers of the paper. Each value is either recomputed from the stored measurements in results/ by scripts/verify_claims.py or re-read from a named pointer in a curated artifact. scripts/verify_claims.py fails closed on any mismatch.",
+  "values": {
+    "ceiling_identity.breadth.all_inside_law_band": {
+      "kind": "recomputed",
+      "source": "results/breadth/breadth_verdict.json",
+      "value": true
+    },
+    "ceiling_identity.breadth.law_band_high": {
+      "kind": "reread",
+      "source": "results/breadth/breadth_verdict.json",
+      "value": 1.3
+    },
+    "ceiling_identity.breadth.law_band_low": {
+      "kind": "reread",
+      "source": "results/breadth/breadth_verdict.json",
+      "value": 1.23
+    },
+    "ceiling_identity.breadth.max_empirical_c": {
+      "kind": "recomputed",
+      "source": "results/breadth/breadth_verdict.json",
+      "value": 1.2694550647157505
+    },
+    "ceiling_identity.breadth.min_empirical_c": {
+      "kind": "recomputed",
+      "source": "results/breadth/breadth_verdict.json",
+      "value": 1.2346698390797193
+    },
+    "ceiling_identity.breadth.n_confirmed": {
+      "kind": "recomputed",
+      "source": "results/breadth/breadth_verdict.json",
+      "value": 6
+    },
+    "ceiling_identity.breadth.n_models": {
+      "kind": "recomputed",
+      "source": "results/breadth/breadth_verdict.json",
+      "value": 6
+    },
+    "ceiling_identity.flagship_c": {
+      "kind": "reread",
+      "source": "results/breadth/breadth_verdict.json",
+      "value": 1.2473440820478192
+    },
+    "ceiling_identity.flagship_shortfall_percent": {
+      "kind": "recomputed",
+      "source": "results/breadth/breadth_verdict.json",
+      "value": 4.266961513110285
+    },
+    "ceiling_identity.gaussian_cage_target": {
+      "kind": "recomputed",
+      "source": "closed form 4/sqrt(3*pi), no artifact",
+      "value": 1.3029400317411197
+    },
+    "ceiling_identity.ladder.monotone_on_cooling": {
+      "kind": "recomputed",
+      "source": "results/dw_identity_ladder/dw_identity_ladder.json",
+      "value": true
+    },
+    "ceiling_identity.ladder.n_rungs": {
+      "kind": "recomputed",
+      "source": "results/dw_identity_ladder/dw_identity_ladder.json",
+      "value": 5
+    },
+    "ceiling_identity.ladder.s_conf_coldest": {
+      "kind": "recomputed",
+      "source": "results/dw_identity_ladder/dw_identity_ladder.json",
+      "value": 1.6814570874650416
+    },
+    "ceiling_identity.ladder.s_conf_warmest": {
+      "kind": "recomputed",
+      "source": "results/dw_identity_ladder/dw_identity_ladder.json",
+      "value": 2.733759528663791
+    },
+    "ceiling_identity.ladder.spearman_rho_c_vs_s_conf": {
+      "kind": "recomputed",
+      "source": "results/dw_identity_ladder/dw_identity_ladder.json",
+      "value": -0.9999999999999999
+    },
+    "ceiling_identity.ladder_c.T0.075": {
+      "kind": "recomputed",
+      "source": "results/dw_identity_ladder/dw_identity_ladder.json",
+      "value": 1.216689160823194
+    },
+    "ceiling_identity.ladder_c.T0.090": {
+      "kind": "recomputed",
+      "source": "results/dw_identity_ladder/dw_identity_ladder.json",
+      "value": 1.1638620143334257
+    },
+    "ceiling_identity.ladder_c.T0.108": {
+      "kind": "recomputed",
+      "source": "results/dw_identity_ladder/dw_identity_ladder.json",
+      "value": 1.0883678746488903
+    },
+    "ceiling_identity.ladder_c.T0.130": {
+      "kind": "recomputed",
+      "source": "results/dw_identity_ladder/dw_identity_ladder.json",
+      "value": 0.9963265708481577
+    },
+    "ceiling_identity.ladder_c.T0.150": {
+      "kind": "recomputed",
+      "source": "results/dw_identity_ladder/dw_identity_ladder.json",
+      "value": 0.9891683383408957
+    },
+    "cone_geometry.chaos.closure_n_records": {
+      "kind": "reread",
+      "source": "results/chaos_relations/chaos_relations.json",
+      "value": 70
+    },
+    "cone_geometry.chaos.closure_pearson": {
+      "kind": "reread",
+      "source": "results/chaos_relations/chaos_relations.json",
+      "value": 0.9871588443700979
+    },
+    "cone_geometry.chaos.ell_c_ci_high": {
+      "kind": "reread",
+      "source": "results/chaos_relations/chaos_relations.json",
+      "value": 3.6060154064531518
+    },
+    "cone_geometry.chaos.ell_c_ci_low": {
+      "kind": "reread",
+      "source": "results/chaos_relations/chaos_relations.json",
+      "value": 3.395378479390926
+    },
+    "cone_geometry.chaos.ell_c_intensive": {
+      "kind": "reread",
+      "source": "results/chaos_relations/chaos_relations.json",
+      "value": true
+    },
+    "cone_geometry.chaos.ell_c_sigma": {
+      "kind": "reread",
+      "source": "results/chaos_relations/chaos_relations.json",
+      "value": 3.5366171630027097
+    },
+    "confinement.anisotropy.0.35": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 1.0375467200868023
+    },
+    "confinement.anisotropy.0.45": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 1.0152561732601895
+    },
+    "confinement.anisotropy.0.50": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.9879581531638701
+    },
+    "confinement.anisotropy.0.70": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.9882159500850285
+    },
+    "confinement.anisotropy.bulk": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.9864449146537441
+    },
+    "confinement.anisotropy.matched_clip_control": {
+      "kind": "recomputed",
+      "source": "results/confinement/matched_clip_bulk_control.json",
+      "value": 0.9839689176977058
+    },
+    "confinement.anisotropy_sem.bulk": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.005797009855985912
+    },
+    "confinement.anisotropy_z.0.35": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 5.414999971097554
+    },
+    "confinement.anisotropy_z.0.45": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 3.8344481078382686
+    },
+    "confinement.anisotropy_z.0.50": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.10069759309468433
+    },
+    "confinement.anisotropy_z.0.70": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.14373182484167266
+    },
+    "confinement.anisotropy_z.matched_clip_control": {
+      "kind": "recomputed",
+      "source": "results/confinement/matched_clip_bulk_control.json + results/confinement/slab_cone_merged.json",
+      "value": -0.24378320361931416
+    },
+    "confinement.box_edge_sigma": {
+      "kind": "reread",
+      "source": "results/confinement/matched_clip_bulk_control.json",
+      "value": 11.447142601013184
+    },
+    "confinement.c_ratio.0.35": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 1.229690885066814
+    },
+    "confinement.c_ratio.0.45": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 1.2004732894287482
+    },
+    "confinement.c_ratio.0.50": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 1.22130571388401
+    },
+    "confinement.c_ratio.0.70": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 1.214349748388987
+    },
+    "confinement.c_ratio.bulk": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 1.2445889656707663
+    },
+    "confinement.c_ratio_sem.0.35": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.017358805750702852
+    },
+    "confinement.c_ratio_sem.0.45": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.013840437866811888
+    },
+    "confinement.c_ratio_sem.0.50": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.009643812586123499
+    },
+    "confinement.c_ratio_sem.0.70": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.007188575958674311
+    },
+    "confinement.c_ratio_sem.bulk": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.007939471980554008
+    },
+    "confinement.ceiling.n_films": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 4
+    },
+    "confinement.ceiling.n_pairs": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 40
+    },
+    "confinement.ceiling.worst_deviation_percent": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 3.544598052758896
+    },
+    "confinement.ceiling.worst_film": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.45
+    },
+    "confinement.d_sat_per_particle.0.35": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.12277569974622829
+    },
+    "confinement.d_sat_per_particle.0.45": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.1266559598778218
+    },
+    "confinement.d_sat_per_particle.0.50": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.13058737681580063
+    },
+    "confinement.d_sat_per_particle.0.70": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.1331371572497356
+    },
+    "confinement.d_sat_per_particle.bulk": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.14789098476478177
+    },
+    "confinement.kick_discarded.0.35": {
+      "kind": "reread",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 4
+    },
+    "confinement.kick_discarded.0.45": {
+      "kind": "reread",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0
+    },
+    "confinement.kick_discarded.0.50": {
+      "kind": "reread",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0
+    },
+    "confinement.kick_discarded.0.70": {
+      "kind": "reread",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0
+    },
+    "confinement.kick_discarded.bulk": {
+      "kind": "reread",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0
+    },
+    "confinement.matched_clip.kick_clip_fraction": {
+      "kind": "reread",
+      "source": "results/confinement/matched_clip_bulk_control.json",
+      "value": 0.35
+    },
+    "confinement.onset.flattened_at_sigma": {
+      "kind": "recomputed",
+      "source": "results/confinement/matched_clip_bulk_control.json",
+      "value": 5.151214170455932
+    },
+    "confinement.onset.isotropic_at_sigma": {
+      "kind": "recomputed",
+      "source": "results/confinement/matched_clip_bulk_control.json",
+      "value": 5.723571300506592
+    },
+    "confinement.onset.window_sigma": {
+      "kind": "recomputed",
+      "source": "results/confinement/matched_clip_bulk_control.json",
+      "value": 0.5723571300506594
+    },
+    "confinement.stationarity.all_passed": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_stationarity_gate.json",
+      "value": true
+    },
+    "confinement.stationarity.max_drift_ratio": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_stationarity_gate.json",
+      "value": 1.0094975428953956
+    },
+    "confinement.stationarity.min_drift_ratio": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_stationarity_gate.json",
+      "value": 1.0002083814787794
+    },
+    "confinement.stationarity.n_arms": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_stationarity_gate.json",
+      "value": 4
+    },
+    "confinement.stationarity.tolerance": {
+      "kind": "reread",
+      "source": "results/confinement/slab_stationarity_gate.json",
+      "value": 1.1
+    },
+    "confinement.summary_agreement.max_absolute_gap_below_1e_12": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": true
+    },
+    "confinement.summary_agreement.n_fields": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 40
+    },
+    "confinement.thickness_sigma.0.35": {
+      "kind": "recomputed",
+      "source": "results/confinement/matched_clip_bulk_control.json",
+      "value": 4.006499910354614
+    },
+    "confinement.thickness_sigma.0.45": {
+      "kind": "recomputed",
+      "source": "results/confinement/matched_clip_bulk_control.json",
+      "value": 5.151214170455932
+    },
+    "confinement.thickness_sigma.0.50": {
+      "kind": "recomputed",
+      "source": "results/confinement/matched_clip_bulk_control.json",
+      "value": 5.723571300506592
+    },
+    "confinement.thickness_sigma.0.70": {
+      "kind": "recomputed",
+      "source": "results/confinement/matched_clip_bulk_control.json",
+      "value": 8.012999820709227
+    },
+    "confinement.u_dw.0.35": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.1000255847388882
+    },
+    "confinement.u_dw.0.45": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.10554314351720158
+    },
+    "confinement.u_dw.0.50": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.10693533740414043
+    },
+    "confinement.u_dw.0.70": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.10964601458940429
+    },
+    "confinement.u_dw.bulk": {
+      "kind": "recomputed",
+      "source": "results/confinement/slab_cone_merged.json",
+      "value": 0.11883502207436611
+    },
+    "entropy_axis.flagship_ladder.lambda_coldest": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 0.9661368965797221
+    },
+    "entropy_axis.flagship_ladder.lambda_fall_percent": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 28.273375657871934
+    },
+    "entropy_axis.flagship_ladder.lambda_warmest": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 1.3469710939850674
+    },
+    "entropy_axis.flagship_ladder.n_rungs": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 5
+    },
+    "entropy_axis.flagship_ladder.s_conf_coldest": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 1.6814570874650416
+    },
+    "entropy_axis.flagship_ladder.s_conf_fall_percent": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 38.49286779488958
+    },
+    "entropy_axis.flagship_ladder.s_conf_warmest": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 2.733759528663791
+    },
+    "entropy_axis.flagship_ladder.spearman_rho_lambda_vs_s_conf": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 0.9999999999999999
+    },
+    "entropy_axis.pooled.n_models": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 6
+    },
+    "entropy_axis.pooled.n_states": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 12
+    },
+    "entropy_axis.pooled.r_lambda_vs_proxy": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": 0.9170728668242245
+    },
+    "entropy_axis.pooled.r_lambda_vs_stiffness": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": -0.469336192305977
+    },
+    "entropy_axis.pooled.r_proxy_vs_stiffness": {
+      "kind": "recomputed",
+      "source": "results/breadth/pooled_separation.json",
+      "value": -0.37329507908009973
+    },
+    "raw_audit.audit.max_absolute_difference": {
+      "kind": "recomputed",
+      "source": "results/breadth/verification.json",
+      "value": 0.0
+    },
+    "raw_audit.audit.n_checks": {
+      "kind": "recomputed",
+      "source": "results/breadth/verification.json",
+      "value": 12
+    },
+    "raw_audit.audit.n_matched": {
+      "kind": "recomputed",
+      "source": "results/breadth/verification.json",
+      "value": 12
+    },
+    "raw_audit.audit.n_models": {
+      "kind": "recomputed",
+      "source": "results/breadth/verification.json",
+      "value": 2
+    },
+    "raw_audit.audit.tolerance": {
+      "kind": "reread",
+      "source": "results/breadth/verification.json",
+      "value": 1e-10
+    }
+  }
+}

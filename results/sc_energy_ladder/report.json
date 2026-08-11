@@ -1,0 +1,170 @@
+{
+  "T_grid": [
+    30.0,
+    21.163516766343797,
+    14.929814730643837,
+    10.532246145679578,
+    7.429978929711656,
+    5.241482788417793,
+    3.697606962439413,
+    2.6084788981645364,
+    1.8401528965319724,
+    1.2981368892796836,
+    0.9157713940426656,
+    0.6460314417319997,
+    0.4557432416226809,
+    0.3215043245076493,
+    0.22680540540565583,
+    0.16,
+    0.15,
+    0.13,
+    0.108,
+    0.09,
+    0.075
+  ],
+  "cold_ladder": [
+    {
+      "n_replicas": 4,
+      "temperature": 0.15,
+      "u_ex": 0.46080841383666027,
+      "u_ex_std": 0.009273865960046881
+    },
+    {
+      "n_replicas": 4,
+      "temperature": 0.13,
+      "u_ex": 0.4202346992069016,
+      "u_ex_std": 0.00194963737452567
+    },
+    {
+      "n_replicas": 4,
+      "temperature": 0.108,
+      "u_ex": 0.38121486950616773,
+      "u_ex_std": 0.003368589062049703
+    },
+    {
+      "n_replicas": 4,
+      "temperature": 0.09,
+      "u_ex": 0.3420170071072303,
+      "u_ex_std": 0.0028210571791889806
+    },
+    {
+      "n_replicas": 4,
+      "temperature": 0.075,
+      "u_ex": 0.3088014527715298,
+      "u_ex_std": 0.0026297863919246657
+    }
+  ],
+  "config_path": "runs/sc_energy_ladder/config_ladder.npz",
+  "convention": "u_grid[i] = <U_pot>(T_grid[i]) / N (potential energy per particle); this is the excess internal energy over the ideal gas, integrated by sc_pipeline's TI leg from beta=0. No extra reference subtraction.",
+  "energy_grid_path": "runs/sc_energy_ladder/energy_grid.npz",
+  "n_ladder_points": 21,
+  "sc_pipeline": {
+    "conservative_in_range_command": "PYTHONPATH=src python \\\n    scripts/sc_pipeline.py \\\n    --config runs/sc_energy_ladder/config_ladder.npz \\\n    --energy-grid runs/sc_energy_ladder/energy_grid.npz \\\n    --temperatures 0.108 0.09 0.075 \\\n    --replicas 4 \\\n    --out runs/sc_energy_ladder/sc_curve.json",
+    "full_curve_command": "PYTHONPATH=src python \\\n    scripts/sc_pipeline.py \\\n    --config runs/sc_energy_ladder/config_ladder.npz \\\n    --energy-grid runs/sc_energy_ladder/energy_grid.npz \\\n    --replicas 4 \\\n    --allow-mixing-extrapolation \\\n    --out runs/sc_energy_ladder/sc_curve.json",
+    "full_curve_temperatures": [
+      0.15,
+      0.13,
+      0.108,
+      0.09,
+      0.075
+    ],
+    "in_calibration_temperatures": [
+      0.108,
+      0.09,
+      0.075
+    ],
+    "requires_allow_mixing_extrapolation": true
+  },
+  "seed": 20240716,
+  "source_config": "data/configs_N1500.npz",
+  "u_grid": [
+    12.285471545250081,
+    9.826319958736784,
+    7.83269600848383,
+    6.118533730946401,
+    5.173353819769121,
+    4.066256551915695,
+    3.3313960858064724,
+    2.666981832583456,
+    2.107669367333265,
+    1.7205950940827877,
+    1.3785676450276882,
+    1.0982280157428757,
+    0.8895258707823087,
+    0.7024466740484262,
+    0.5736498447505015,
+    0.4724388957415208,
+    0.46080841383666027,
+    0.4202346992069016,
+    0.38121486950616773,
+    0.3420170071072303,
+    0.3088014527715298
+  ],
+  "warm_enabled": true,
+  "warm_ladder": [
+    {
+      "temperature": 30.0,
+      "u_ex": 12.285471545250081
+    },
+    {
+      "temperature": 21.163516766343797,
+      "u_ex": 9.826319958736784
+    },
+    {
+      "temperature": 14.929814730643837,
+      "u_ex": 7.83269600848383
+    },
+    {
+      "temperature": 10.532246145679578,
+      "u_ex": 6.118533730946401
+    },
+    {
+      "temperature": 7.429978929711656,
+      "u_ex": 5.173353819769121
+    },
+    {
+      "temperature": 5.241482788417793,
+      "u_ex": 4.066256551915695
+    },
+    {
+      "temperature": 3.697606962439413,
+      "u_ex": 3.3313960858064724
+    },
+    {
+      "temperature": 2.6084788981645364,
+      "u_ex": 2.666981832583456
+    },
+    {
+      "temperature": 1.8401528965319724,
+      "u_ex": 2.107669367333265
+    },
+    {
+      "temperature": 1.2981368892796836,
+      "u_ex": 1.7205950940827877
+    },
+    {
+      "temperature": 0.9157713940426656,
+      "u_ex": 1.3785676450276882
+    },
+    {
+      "temperature": 0.6460314417319997,
+      "u_ex": 1.0982280157428757
+    },
+    {
+      "temperature": 0.4557432416226809,
+      "u_ex": 0.8895258707823087
+    },
+    {
+      "temperature": 0.3215043245076493,
+      "u_ex": 0.7024466740484262
+    },
+    {
+      "temperature": 0.22680540540565583,
+      "u_ex": 0.5736498447505015
+    },
+    {
+      "temperature": 0.16,
+      "u_ex": 0.4724388957415208
+    }
+  ]
+}

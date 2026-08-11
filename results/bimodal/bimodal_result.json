@@ -1,0 +1,305 @@
+{
+  "aging_check": {
+    "branches": 8,
+    "max_nve_relative_energy_span": 8.125961307935802e-05,
+    "msd_late_relative_drift": 0.02793331522564027,
+    "physical_time": 60.0,
+    "stationary": true,
+    "u2_late_relative_drift": 0.04774028168240298,
+    "u_DW_from_aging_probe": 0.13056630432113506
+  },
+  "ceiling_measurement": {
+    "D_sat_over_N": 0.15766654091882445,
+    "N": 1500,
+    "classification": {
+      "empirical_c": 1.2346698390797193,
+      "gaussian_c": 1.3029400317411202,
+      "holds": true,
+      "measured_over_gaussian": 0.9476029663697021,
+      "relative_error": 0.05239703363029791,
+      "tolerance": 0.1
+    },
+    "empirical_c": 1.2346698390797193,
+    "gaussian_c": 1.3029400317411202,
+    "intrinsic_pairwise_c": 1.2392421825022757,
+    "intrinsic_pairwise_divergence_per_particle": 0.15825042622039198,
+    "measured_over_predicted": 0.947602966369702,
+    "pairwise_minus_landed_relative": 0.003689628619099974,
+    "predicted_D_sat_over_N": 0.16638460042273837,
+    "relative_error": 0.05239703363029802,
+    "u_DW": 0.12769935405269453
+  },
+  "compute": {
+    "cage_branch_wall_seconds": null,
+    "cage_wall_note": "Per-branch wall timings were printed during the durable cage run but not persisted; its exact workload was 8 x 6000 NVE steps.",
+    "durable_cone_branch_wall_seconds": 665.6999999999999,
+    "hybrid_wall_seconds": 575.6124949570512,
+    "workload": {
+      "cage_branch_md_steps": 48000,
+      "cone_branch_md_steps": 168000,
+      "hybrid_md_steps": 120000,
+      "swap_attempts": 1500000
+    }
+  },
+  "cone": {
+    "D_sat_std": 1.1776896538608177,
+    "D_sat_total": 236.49981137823667,
+    "all_growing": true,
+    "all_plateaus_stationary": true,
+    "all_saturated": true,
+    "branches": 8,
+    "delta_statistics": {
+      "0.01": {
+        "D_sat_mean": 236.03208948874632,
+        "lambda_mean": 0.9164950873773346,
+        "n": 3
+      },
+      "0.03": {
+        "D_sat_mean": 236.96753326772696,
+        "lambda_mean": 0.9480021999939213,
+        "n": 3
+      },
+      "delta_plateau_relative_difference": 0.003955367970609397
+    },
+    "deltas": [
+      0.01,
+      0.03
+    ],
+    "lambda_fit_r2_max": 0.9796740139298293,
+    "lambda_fit_r2_min": 0.964663868391291,
+    "lambda_mean": 0.9322486436856282,
+    "lambda_median": 0.9417893254214393,
+    "lambda_std": 0.02790738147897969,
+    "n_resolved": 6,
+    "n_sites": 3,
+    "n_total_ensembles": 6,
+    "operator": "O_shell",
+    "plateau_stationarity": {
+      "all_stationary": true,
+      "ensembles": [
+        {
+          "D_final": 233.50583235624654,
+          "D_late_mean": 236.11343132054077,
+          "delta": 0.01,
+          "label": "c0-s0-d0",
+          "late_relative_drift": 0.006776360191776514,
+          "late_relative_slope_over_window": 0.007339996488460487,
+          "stationary": true
+        },
+        {
+          "D_final": 239.33314694762652,
+          "D_late_mean": 237.45365543857613,
+          "delta": 0.03,
+          "label": "c0-s0-d1",
+          "late_relative_drift": 0.002318501716357861,
+          "late_relative_slope_over_window": 0.0020070971382109243,
+          "stationary": true
+        },
+        {
+          "D_final": 235.85965334599672,
+          "D_late_mean": 239.04954281693261,
+          "delta": 0.01,
+          "label": "c0-s1-d0",
+          "late_relative_drift": 0.00036588178175717725,
+          "late_relative_slope_over_window": 0.0049678584864127195,
+          "stationary": true
+        },
+        {
+          "D_final": 242.5331945572613,
+          "D_late_mean": 240.22540485096877,
+          "delta": 0.03,
+          "label": "c0-s1-d1",
+          "late_relative_drift": 0.0010202267429463392,
+          "late_relative_slope_over_window": 0.002269505719739511,
+          "stationary": true
+        },
+        {
+          "D_final": 236.32455415745991,
+          "D_late_mean": 236.74350566032464,
+          "delta": 0.01,
+          "label": "c0-s2-d0",
+          "late_relative_drift": 0.0004993761933885611,
+          "late_relative_slope_over_window": 0.0021736511065580584,
+          "stationary": true
+        },
+        {
+          "D_final": 241.43779521913277,
+          "D_late_mean": 236.80111400343742,
+          "delta": 0.03,
+          "label": "c0-s2-d1",
+          "late_relative_drift": 0.0018437432175440283,
+          "late_relative_slope_over_window": 0.0009309139918582131,
+          "stationary": true
+        }
+      ],
+      "n_skipped_by_raw_reader": 0,
+      "skipped": []
+    }
+  },
+  "discarded_artifacts": {
+    "paths": [
+      "runs/bimodal/campaign_root",
+      "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged--c0-unpert/runs"
+    ],
+    "reason": "The initial batched unperturbed attempt hit the foreground timeout; the first durable writer then nested eight files through a run-relative-path bug. Neither set is referenced by any finalized branch_provenance.json or by the analysis."
+  },
+  "equilibration": {
+    "cross_peak_label_fraction": 0.34,
+    "final_E_per_particle": 0.41737189409475384,
+    "final_energy_span_last_blocks": 0.005052552542823274,
+    "hybrid_protocol": {
+      "dt": 0.005,
+      "energy_blocks": 8,
+      "energy_span_tol": 0.003,
+      "max_sweeps": 1000,
+      "md_steps_per_hybrid_sweep": 120,
+      "min_sweeps": 600,
+      "swap_attempts_per_sweep": 1500,
+      "thermostat": "Bussi stochastic velocity rescaling",
+      "thermostat_tau": 0.5
+    },
+    "strict_energy_plateau_passed": false,
+    "swap_acceptance": 0.13849533333333333,
+    "swap_healthy": true,
+    "sweeps_completed": 1000,
+    "temperature": 0.1
+  },
+  "matched_seed_verification": {
+    "all_perturbed_match_unperturbed": true,
+    "ensembles": [
+      {
+        "directory": "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged--c0-s0-d0",
+        "matches_unperturbed": true,
+        "n_branches": 8
+      },
+      {
+        "directory": "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged--c0-s0-d1",
+        "matches_unperturbed": true,
+        "n_branches": 8
+      },
+      {
+        "directory": "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged--c0-s1-d0",
+        "matches_unperturbed": true,
+        "n_branches": 8
+      },
+      {
+        "directory": "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged--c0-s1-d1",
+        "matches_unperturbed": true,
+        "n_branches": 8
+      },
+      {
+        "directory": "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged--c0-s2-d0",
+        "matches_unperturbed": true,
+        "n_branches": 8
+      },
+      {
+        "directory": "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged--c0-s2-d1",
+        "matches_unperturbed": true,
+        "n_branches": 8
+      }
+    ],
+    "reference_n_branches": 8
+  },
+  "model": {
+    "cutoff_ratio": 1.25,
+    "exponent": 12,
+    "family": "flagship C2-smoothed r^-12 IPL",
+    "monkeypatch": "none",
+    "nonadditivity": 0.2
+  },
+  "question": "Does D_sat/N = c u_DW hold in a strongly bimodal continuous r^-12 glass?",
+  "raw_paths": {
+    "aging": "runs/bimodal/aging_probe.json",
+    "campaign_root": "runs/bimodal/campaign_staged_root/runs/gardner",
+    "cone_reanalysis": "runs/bimodal/cone_analysis_raw.json",
+    "dw_identity": "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged/dw_identity.json",
+    "equilibration": "runs/bimodal/equilibration_stage.json",
+    "gardner_r0": "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged/gardner_r0.json"
+  },
+  "schema_version": 1,
+  "size_distribution": {
+    "measured": {
+      "histogram": {
+        "counts": [
+          4,
+          4,
+          16,
+          24,
+          49,
+          84,
+          103,
+          132,
+          107,
+          91,
+          74,
+          54,
+          35,
+          67,
+          93,
+          114,
+          149,
+          94,
+          84,
+          66,
+          33,
+          15,
+          7,
+          1
+        ],
+        "edges": [
+          0.5949957813446044,
+          0.6283379952639718,
+          0.6616802091833393,
+          0.6950224231027067,
+          0.7283646370220742,
+          0.7617068509414415,
+          0.7950490648608091,
+          0.8283912787801765,
+          0.8617334926995439,
+          0.8950757066189113,
+          0.9284179205382788,
+          0.9617601344576463,
+          0.9951023483770136,
+          1.0284445622963811,
+          1.0617867762157487,
+          1.095128990135116,
+          1.1284712040544833,
+          1.1618134179738508,
+          1.1951556318932184,
+          1.2284978458125857,
+          1.261840059731953,
+          1.2951822736513208,
+          1.328524487570688,
+          1.3618667014900554,
+          1.395208915409423
+        ]
+      },
+      "large_peak_mean": 1.1497320168284342,
+      "large_peak_std": 0.07455891324886307,
+      "max": 1.395208915409423,
+      "mean": 1.0,
+      "min": 0.5949957813446044,
+      "n": 1500,
+      "n_large": 750,
+      "n_small": 750,
+      "n_unique": 1500,
+      "peak_separation": 0.2994640336568686,
+      "peak_separation_over_pooled_width": 3.9104683827598308,
+      "rank_boundary": 1.0023105353518384,
+      "small_peak_mean": 0.8502679831715656,
+      "small_peak_std": 0.07854928287004412,
+      "std": 0.16821186550253556
+    },
+    "requested": {
+      "fraction_small": 0.5,
+      "large_center": 1.15,
+      "peak_width": 0.08,
+      "small_center": 0.85
+    }
+  },
+  "verdict": {
+    "cage_ceiling_law_holds_within_10_percent": true,
+    "scope": "One N=1500 parent; 3 sites x 2 deltas x 8 matched NVE branches. The long cage is stationary, while a strict 0.3% eight-block energy-span auxiliary criterion did not pass by the 1000-sweep cap.",
+    "statement": "Supported by this one stationary bimodal parent: c=1.23467, 5.24% below the Gaussian chi_3 prefactor and within the predeclared 10% identity tolerance. It is 1.2% below the literal 1.25 lower edge, so the honest reading is 'about 1.25', not an exact in-band value."
+  }
+}

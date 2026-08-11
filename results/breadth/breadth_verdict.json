@@ -1,0 +1,3253 @@
+{
+  "schema_version": 1,
+  "kind": "breadth_campaign_final_verdict",
+  "new_models": {
+    "soft_r8": {
+      "schema_version": 1,
+      "model": {
+        "name": "soft_r8",
+        "exponent": 8,
+        "nonadditivity": 0.2,
+        "centers": [],
+        "peak_width": 0.0,
+        "temperature": 0.04,
+        "description": "C2-smoothed r^-8 IPL; flagship continuous diameter distribution and mixing",
+        "distribution": "continuous_sigma^-3",
+        "cutoff_ratio": 1.25,
+        "patched": [
+          "butterfly_cone.engine.potential.pair_potential",
+          "butterfly_cone.engine.swap.pair_potential",
+          "butterfly_cone.branching.batched.pair_potential",
+          "butterfly_cone.engine.potential.NONADDITIVITY"
+        ]
+      },
+      "temperature": 0.04,
+      "N": 384,
+      "distribution": {
+        "n": 384,
+        "n_unique": 384,
+        "mean": 1.0000000000000002,
+        "std": 0.24139785829735316,
+        "min": 0.7373742949416227,
+        "max": 1.635144120352028,
+        "peak_means": [
+          0.7820809183443596,
+          0.9235722861644466,
+          1.2943467954911942
+        ],
+        "measured_outer_peak_ratio": 1.6550036768973795,
+        "peaks": [
+          {
+            "label": 0,
+            "n": 128,
+            "mean": 0.7820809183443596,
+            "std": 0.03199579911853583,
+            "min": 0.7373742949416227,
+            "max": 0.8467150698438319
+          },
+          {
+            "label": 1,
+            "n": 128,
+            "mean": 0.9235722861644466,
+            "std": 0.05366650113986237,
+            "min": 0.8472128723029863,
+            "max": 1.0229029625996846
+          },
+          {
+            "label": 2,
+            "n": 128,
+            "mean": 1.2943467954911942,
+            "std": 0.17538686975235382,
+            "min": 1.0267092689581878,
+            "max": 1.635144120352028
+          }
+        ],
+        "histogram": {
+          "counts": [
+            54,
+            31,
+            29,
+            27,
+            29,
+            24,
+            20,
+            15,
+            14,
+            15,
+            9,
+            9,
+            12,
+            6,
+            8,
+            8,
+            3,
+            6,
+            5,
+            7,
+            6,
+            3,
+            4,
+            10,
+            8,
+            6,
+            4,
+            7,
+            1,
+            4
+          ],
+          "edges": [
+            0.7373742949416227,
+            0.7672999557886362,
+            0.7972256166356497,
+            0.8271512774826633,
+            0.8570769383296767,
+            0.8870025991766902,
+            0.9169282600237038,
+            0.9468539208707173,
+            0.9767795817177307,
+            1.0067052425647443,
+            1.0366309034117578,
+            1.0665565642587713,
+            1.0964822251057849,
+            1.1264078859527984,
+            1.156333546799812,
+            1.1862592076468252,
+            1.2161848684938388,
+            1.2461105293408523,
+            1.2760361901878658,
+            1.3059618510348794,
+            1.335887511881893,
+            1.3658131727289065,
+            1.39573883357592,
+            1.4256644944229335,
+            1.455590155269947,
+            1.4855158161169606,
+            1.5154414769639741,
+            1.5453671378109877,
+            1.5752927986580012,
+            1.6052184595050147,
+            1.635144120352028
+          ]
+        }
+      },
+      "equilibration": {
+        "stationary_no_aging": true,
+        "sweeps": 1000,
+        "swap_acceptance": 0.11453385416666667,
+        "swap_label_correlation": 0.6999544887182783,
+        "cross_peak_label_fraction": null,
+        "u2_stationarity": {
+          "stationary": true,
+          "tolerance": 0.1,
+          "n_samples": 61,
+          "late_n_samples": 31,
+          "late_mean": 0.009053970982388346,
+          "late_first_half_mean": 0.00913202543899951,
+          "late_second_half_mean": 0.008980794929315377,
+          "late_relative_drift": 0.016703224472257014,
+          "late_relative_slope_over_window": 0.03477322497293646,
+          "late_linear_slope_per_sample": -1.049452566230095e-05
+        },
+        "parent_msd_stationarity": {
+          "stationary": true,
+          "tolerance": 0.1,
+          "n_samples": 61,
+          "late_n_samples": 31,
+          "late_mean": 0.017670885906820064,
+          "late_first_half_mean": 0.01778965920444048,
+          "late_second_half_mean": 0.017559535940300915,
+          "late_relative_drift": 0.013022734986407825,
+          "late_relative_slope_over_window": 0.018132299415641734,
+          "late_linear_slope_per_sample": -1.068045980673684e-05
+        },
+        "max_nve_energy_span": 5.755463660495405e-05
+      },
+      "cone": {
+        "controls": {
+          "operator": "O_shell",
+          "deltas": [
+            0.01,
+            0.03
+          ],
+          "n_sites": 2,
+          "branches": 12,
+          "horizon": 6000,
+          "stride": 100,
+          "dt": 0.01,
+          "physical_horizon": 60.0,
+          "r_pert": 2.5,
+          "n_perturbed_ensembles": 4,
+          "n_total_ensembles": 5,
+          "matched_momentum_seeds": true,
+          "thermostat": null,
+          "integrator": "velocity_verlet_nve"
+        },
+        "lambda": {
+          "n": 4,
+          "mean": 0.4149538687420674,
+          "std": 0.01367138950593558,
+          "median": 0.41281767768440936,
+          "min": 0.40264320593696945,
+          "max": 0.43153691366248126
+        },
+        "D_sat": {
+          "n": 4,
+          "mean": 46.9448844409869,
+          "std": 0.12386051197597177,
+          "median": 46.99212323381975,
+          "min": 46.76523674487278,
+          "max": 47.03005455143528
+        },
+        "empirical_c": 1.2691681886407293,
+        "intrinsic_pairwise_c": 1.271766503861022,
+        "law_interval": [
+          1.23,
+          1.3
+        ],
+        "intrinsic_match": {
+          "intrinsic_pairwise_divergence_per_particle": 0.12250258528501057,
+          "perturbed_D_sat_per_particle": 0.1222523032317367,
+          "relative_difference": 0.0020451648977522796,
+          "within_10_percent": true
+        },
+        "kick_independence": {
+          "lambda_relative_difference": 0.05387092135975868,
+          "D_sat_relative_difference": 0.002012521423595936,
+          "lambda_within_20_percent": true,
+          "D_sat_within_10_percent": true
+        },
+        "exponential_growth": {
+          "lambda_r2_min": 0.9454668003755504,
+          "resolved_fraction": 1.0,
+          "all_growing": true,
+          "all_saturated": true,
+          "pooled_cone_resolved": true
+        },
+        "perturbed_plateaus_all_stationary": true,
+        "matched_seeds": true
+      },
+      "verdict": {
+        "law_holds": true,
+        "matched_seeds": true,
+        "stationary_perturbed_plateaus": true,
+        "kick_independent_D_sat": true,
+        "resolved_exponential_cone": true
+      },
+      "raw_paths": {
+        "equilibration": "runs/breadth/soft_r8/equilibration.json",
+        "cage": "runs/breadth/soft_r8/cage_raw.npz",
+        "parent": "runs/breadth/soft_r8/parent_T0.040.npz",
+        "cone_base": "runs/breadth/soft_r8/campaign_root/runs/gardner/breadth-soft_r8-cone-s2",
+        "cone_analysis": "runs/breadth/soft_r8/cone_analysis.json"
+      },
+      "compute": {
+        "equilibration": {
+          "wall_seconds": 346.95665799907874,
+          "user_cpu_seconds": 278.27810100000005,
+          "system_cpu_seconds": 187.050813,
+          "hybrid_md_steps": 120000,
+          "swap_attempts": 384000,
+          "cage_branch_md_steps": 48000
+        },
+        "cone": {
+          "wall_seconds": 440.28211999998894,
+          "user_cpu_seconds": 690.066696,
+          "system_cpu_seconds": 686.4118179999999,
+          "branch_md_steps": 360000,
+          "particle_branch_md_steps": 138240000
+        }
+      }
+    },
+    "trimodal": {
+      "schema_version": 1,
+      "model": {
+        "name": "trimodal",
+        "exponent": 12,
+        "nonadditivity": 0.2,
+        "centers": [
+          0.78,
+          1.0,
+          1.22
+        ],
+        "peak_width": 0.045,
+        "temperature": 0.08,
+        "description": "equal-weight continuous three-peak diameter population at fixed r^-12",
+        "distribution": "continuous_trimodal",
+        "cutoff_ratio": 1.25,
+        "patched": [
+          "butterfly_cone.engine.potential.pair_potential",
+          "butterfly_cone.engine.swap.pair_potential",
+          "butterfly_cone.branching.batched.pair_potential",
+          "butterfly_cone.engine.potential.NONADDITIVITY"
+        ]
+      },
+      "temperature": 0.08,
+      "N": 384,
+      "distribution": {
+        "n": 384,
+        "n_unique": 384,
+        "mean": 1.0,
+        "std": 0.18322113607013926,
+        "min": 0.6359761734499658,
+        "max": 1.3318247005429744,
+        "peak_means": [
+          0.7817414369278395,
+          1.0033108253234198,
+          1.2149477377487408
+        ],
+        "measured_outer_peak_ratio": 1.5541554794937773,
+        "peaks": [
+          {
+            "label": 0,
+            "n": 128,
+            "mean": 0.7817414369278395,
+            "std": 0.04942378566226665,
+            "min": 0.6359761734499658,
+            "max": 0.9172483505370539
+          },
+          {
+            "label": 1,
+            "n": 128,
+            "mean": 1.0033108253234198,
+            "std": 0.0475617349552584,
+            "min": 0.8659693760631676,
+            "max": 1.1494488740376174
+          },
+          {
+            "label": 2,
+            "n": 128,
+            "mean": 1.2149477377487408,
+            "std": 0.04409666093472813,
+            "min": 1.118152150292947,
+            "max": 1.3318247005429744
+          }
+        ],
+        "histogram": {
+          "counts": [
+            2,
+            0,
+            7,
+            8,
+            15,
+            23,
+            31,
+            16,
+            12,
+            10,
+            4,
+            3,
+            7,
+            8,
+            31,
+            18,
+            29,
+            10,
+            13,
+            7,
+            4,
+            4,
+            14,
+            21,
+            23,
+            25,
+            20,
+            14,
+            4,
+            1
+          ],
+          "edges": [
+            0.6359761734499658,
+            0.6591711243530661,
+            0.6823660752561664,
+            0.7055610261592666,
+            0.7287559770623669,
+            0.7519509279654673,
+            0.7751458788685676,
+            0.7983408297716679,
+            0.8215357806747681,
+            0.8447307315778684,
+            0.8679256824809687,
+            0.891120633384069,
+            0.9143155842871693,
+            0.9375105351902695,
+            0.9607054860933699,
+            0.9839004369964701,
+            1.0070953878995703,
+            1.0302903388026707,
+            1.053485289705771,
+            1.0766802406088714,
+            1.0998751915119716,
+            1.123070142415072,
+            1.1462650933181722,
+            1.1694600442212724,
+            1.1926549951243728,
+            1.215849946027473,
+            1.2390448969305732,
+            1.2622398478336736,
+            1.285434798736774,
+            1.3086297496398742,
+            1.3318247005429744
+          ]
+        }
+      },
+      "equilibration": {
+        "stationary_no_aging": true,
+        "sweeps": 600,
+        "swap_acceptance": 0.13032118055555555,
+        "swap_label_correlation": 0.6935066278323759,
+        "cross_peak_label_fraction": 0.3463541666666667,
+        "u2_stationarity": {
+          "stationary": true,
+          "tolerance": 0.1,
+          "n_samples": 61,
+          "late_n_samples": 31,
+          "late_mean": 0.009922622804915147,
+          "late_first_half_mean": 0.01000812498324131,
+          "late_second_half_mean": 0.009842464512734371,
+          "late_relative_drift": 0.016695230058012406,
+          "late_relative_slope_over_window": 0.02897645667257887,
+          "late_linear_slope_per_sample": -9.584081659498892e-06
+        },
+        "parent_msd_stationarity": {
+          "stationary": true,
+          "tolerance": 0.1,
+          "n_samples": 61,
+          "late_n_samples": 31,
+          "late_mean": 0.01995160159778792,
+          "late_first_half_mean": 0.020106046518912995,
+          "late_second_half_mean": 0.01980680948423316,
+          "late_relative_drift": 0.014998146049238138,
+          "late_relative_slope_over_window": 0.013492619523669458,
+          "late_linear_slope_per_sample": -8.973312308226267e-06
+        },
+        "max_nve_energy_span": 0.00011359141331567543
+      },
+      "cone": {
+        "controls": {
+          "operator": "O_shell",
+          "deltas": [
+            0.01,
+            0.03
+          ],
+          "n_sites": 2,
+          "branches": 12,
+          "horizon": 6000,
+          "stride": 100,
+          "dt": 0.01,
+          "physical_horizon": 60.0,
+          "r_pert": 2.5,
+          "n_perturbed_ensembles": 4,
+          "n_total_ensembles": 5,
+          "matched_momentum_seeds": true,
+          "thermostat": null,
+          "integrator": "velocity_verlet_nve"
+        },
+        "lambda": {
+          "n": 4,
+          "mean": 0.5606179031900806,
+          "std": 0.0355710420615467,
+          "median": 0.5607807175838373,
+          "min": 0.5286915423508389,
+          "max": 0.5922186352418092
+        },
+        "D_sat": {
+          "n": 4,
+          "mean": 48.69961126983512,
+          "std": 0.2976898224608415,
+          "median": 48.696420782856634,
+          "min": 48.39388238925442,
+          "max": 49.01172112437277
+        },
+        "empirical_c": 1.2694550647157505,
+        "intrinsic_pairwise_c": 1.2671830615786075,
+        "law_interval": [
+          1.23,
+          1.3
+        ],
+        "intrinsic_match": {
+          "intrinsic_pairwise_divergence_per_particle": 0.12659492525131857,
+          "perturbed_D_sat_per_particle": 0.12682190434852894,
+          "relative_difference": 0.0017913498292025313,
+          "within_10_percent": true
+        },
+        "kick_independence": {
+          "lambda_relative_difference": 0.10984164166243886,
+          "D_sat_relative_difference": 0.010318561719889159,
+          "lambda_within_20_percent": true,
+          "D_sat_within_10_percent": true
+        },
+        "exponential_growth": {
+          "lambda_r2_min": 0.9037617675320223,
+          "resolved_fraction": 1.0,
+          "all_growing": true,
+          "all_saturated": true,
+          "pooled_cone_resolved": true
+        },
+        "perturbed_plateaus_all_stationary": true,
+        "matched_seeds": true
+      },
+      "verdict": {
+        "law_holds": true,
+        "matched_seeds": true,
+        "stationary_perturbed_plateaus": true,
+        "kick_independent_D_sat": true,
+        "resolved_exponential_cone": true
+      },
+      "raw_paths": {
+        "equilibration": "runs/breadth/trimodal/equilibration.json",
+        "cage": "runs/breadth/trimodal/cage_raw.npz",
+        "parent": "runs/breadth/trimodal/parent_T0.080.npz",
+        "cone_base": "runs/breadth/trimodal/campaign_root/runs/gardner/breadth-trimodal-cone-s2",
+        "cone_analysis": "runs/breadth/trimodal/cone_analysis.json"
+      },
+      "compute": {
+        "equilibration": {
+          "wall_seconds": 214.0912992489757,
+          "user_cpu_seconds": 168.764885,
+          "system_cpu_seconds": 122.194843,
+          "hybrid_md_steps": 72000,
+          "swap_attempts": 230400,
+          "cage_branch_md_steps": 48000
+        },
+        "cone": {
+          "wall_seconds": 300.8856717500603,
+          "user_cpu_seconds": 426.109732,
+          "system_cpu_seconds": 347.237217,
+          "branch_md_steps": 360000,
+          "particle_branch_md_steps": 138240000
+        }
+      }
+    },
+    "extreme_bimodal": {
+      "schema_version": 1,
+      "model": {
+        "name": "extreme_bimodal",
+        "exponent": 12,
+        "nonadditivity": 0.2,
+        "centers": [
+          0.7692307692307692,
+          1.2307692307692308
+        ],
+        "peak_width": 0.18,
+        "temperature": 0.1,
+        "description": "equal-weight continuous two-peak population with center ratio exactly 1.6",
+        "distribution": "continuous_extreme_bimodal",
+        "cutoff_ratio": 1.25,
+        "patched": [
+          "butterfly_cone.engine.potential.pair_potential",
+          "butterfly_cone.engine.swap.pair_potential",
+          "butterfly_cone.branching.batched.pair_potential",
+          "butterfly_cone.engine.potential.NONADDITIVITY"
+        ]
+      },
+      "status": "stationarity_null",
+      "final_candidate": {
+        "path": "runs/breadth/extreme_bimodal/smoke_w018_T0080/equilibration.json",
+        "temperature": 0.08,
+        "N": 192,
+        "distribution": {
+          "n": 192,
+          "n_unique": 192,
+          "mean": 1.0,
+          "std": 0.319121756015239,
+          "min": 0.19259617532413587,
+          "max": 1.7966788775514724,
+          "peak_means": [
+            0.7517596974930086,
+            1.2482403025069915
+          ],
+          "measured_outer_peak_ratio": 1.6604246099779778,
+          "peaks": [
+            {
+              "label": 0,
+              "n": 96,
+              "mean": 0.7517596974930086,
+              "std": 0.19655085232296046,
+              "min": 0.19259617532413587,
+              "max": 1.2957244986349972
+            },
+            {
+              "label": 1,
+              "n": 96,
+              "mean": 1.2482403025069915,
+              "std": 0.2038953455343276,
+              "min": 0.6848936077388229,
+              "max": 1.7966788775514724
+            }
+          ],
+          "histogram": {
+            "counts": [
+              1,
+              1,
+              0,
+              3,
+              3,
+              1,
+              7,
+              5,
+              11,
+              7,
+              17,
+              13,
+              9,
+              9,
+              9,
+              7,
+              13,
+              8,
+              16,
+              5,
+              13,
+              8,
+              6,
+              8,
+              3,
+              4,
+              3,
+              1,
+              0,
+              1
+            ],
+            "edges": [
+              0.19259617532413587,
+              0.24606559873171374,
+              0.2995350221392916,
+              0.3530044455468695,
+              0.40647386895444737,
+              0.4599432923620253,
+              0.5134127157696031,
+              0.566882139177181,
+              0.6203515625847589,
+              0.6738209859923368,
+              0.7272904093999147,
+              0.7807598328074926,
+              0.8342292562150705,
+              0.8876986796226484,
+              0.9411681030302262,
+              0.9946375264378041,
+              1.048106949845382,
+              1.1015763732529598,
+              1.1550457966605379,
+              1.2085152200681157,
+              1.2619846434756936,
+              1.3154540668832715,
+              1.3689234902908494,
+              1.4223929136984272,
+              1.4758623371060051,
+              1.529331760513583,
+              1.5828011839211609,
+              1.6362706073287387,
+              1.6897400307363166,
+              1.7432094541438945,
+              1.7966788775514724
+            ]
+          }
+        },
+        "equilibration": {
+          "converged": true,
+          "sweeps_completed": 725,
+          "elapsed_seconds": 87.53809041692875,
+          "log": [
+            {
+              "sweep": 25,
+              "md_steps": 3000,
+              "E_per_particle": 0.6584780633447425,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 4800,
+              "swap_accepted": 298,
+              "swap_acceptance": 0.06208333333333333,
+              "swap_label_correlation": 0.9640393538165822,
+              "cross_peak_label_fraction": 0.03125,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 50,
+              "md_steps": 6000,
+              "E_per_particle": 0.5812645579947068,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 9600,
+              "swap_accepted": 588,
+              "swap_acceptance": 0.06125,
+              "swap_label_correlation": 0.9356281642736999,
+              "cross_peak_label_fraction": 0.052083333333333336,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 75,
+              "md_steps": 9000,
+              "E_per_particle": 0.557018547838326,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 14400,
+              "swap_accepted": 864,
+              "swap_acceptance": 0.06,
+              "swap_label_correlation": 0.9201844197209864,
+              "cross_peak_label_fraction": 0.07291666666666667,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 100,
+              "md_steps": 12000,
+              "E_per_particle": 0.5428051530338877,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 19200,
+              "swap_accepted": 1159,
+              "swap_acceptance": 0.06036458333333333,
+              "swap_label_correlation": 0.9124766036865821,
+              "cross_peak_label_fraction": 0.08333333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 125,
+              "md_steps": 15000,
+              "E_per_particle": 0.5353048752404739,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 24000,
+              "swap_accepted": 1440,
+              "swap_acceptance": 0.06,
+              "swap_label_correlation": 0.8914034807001224,
+              "cross_peak_label_fraction": 0.07291666666666667,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 150,
+              "md_steps": 18000,
+              "E_per_particle": 0.5319858279509433,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 28800,
+              "swap_accepted": 1697,
+              "swap_acceptance": 0.058923611111111114,
+              "swap_label_correlation": 0.8834557273506471,
+              "cross_peak_label_fraction": 0.08333333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 175,
+              "md_steps": 21000,
+              "E_per_particle": 0.532650977701666,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 33600,
+              "swap_accepted": 2011,
+              "swap_acceptance": 0.059851190476190474,
+              "swap_label_correlation": 0.8802550915657001,
+              "cross_peak_label_fraction": 0.09375,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 200,
+              "md_steps": 24000,
+              "E_per_particle": 0.5292259569093535,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 38400,
+              "swap_accepted": 2306,
+              "swap_acceptance": 0.06005208333333333,
+              "swap_label_correlation": 0.8702717260686349,
+              "cross_peak_label_fraction": 0.10416666666666667,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 225,
+              "md_steps": 27000,
+              "E_per_particle": 0.5228806660297952,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 43200,
+              "swap_accepted": 2591,
+              "swap_acceptance": 0.05997685185185185,
+              "swap_label_correlation": 0.8588198125348773,
+              "cross_peak_label_fraction": 0.10416666666666667,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 250,
+              "md_steps": 30000,
+              "E_per_particle": 0.516953864760097,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 48000,
+              "swap_accepted": 2867,
+              "swap_acceptance": 0.059729166666666667,
+              "swap_label_correlation": 0.8586658924957695,
+              "cross_peak_label_fraction": 0.10416666666666667,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 275,
+              "md_steps": 33000,
+              "E_per_particle": 0.5196925801584317,
+              "energy_span_last_blocks": null,
+              "energy_stationarity": null,
+              "swap_attempts": 52800,
+              "swap_accepted": 3126,
+              "swap_acceptance": 0.059204545454545454,
+              "swap_label_correlation": 0.8578920649771528,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 300,
+              "md_steps": 36000,
+              "E_per_particle": 0.5114881564769863,
+              "energy_span_last_blocks": 0.14698990686775615,
+              "energy_stationarity": {
+                "stationary": false,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.5221487003393882,
+                "late_first_half_mean": 0.5282525335469382,
+                "late_second_half_mean": 0.5160448671318383,
+                "late_relative_drift": 0.023379674041446766,
+                "late_relative_slope_over_window": 0.03839657103553622,
+                "late_linear_slope_per_sample": -0.004009743932738847
+              },
+              "swap_attempts": 57600,
+              "swap_accepted": 3381,
+              "swap_acceptance": 0.05869791666666667,
+              "swap_label_correlation": 0.8446747401923371,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 325,
+              "md_steps": 39000,
+              "E_per_particle": 0.5079882583029707,
+              "energy_span_last_blocks": 0.0732762996917361,
+              "energy_stationarity": {
+                "stationary": false,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.5180382471062724,
+                "late_first_half_mean": 0.5230201625664153,
+                "late_second_half_mean": 0.5130563316461295,
+                "late_relative_drift": 0.019233774679655504,
+                "late_relative_slope_over_window": 0.03795288063347813,
+                "late_linear_slope_per_sample": -0.003932208751200121
+              },
+              "swap_attempts": 62400,
+              "swap_accepted": 3653,
+              "swap_acceptance": 0.058541666666666665,
+              "swap_label_correlation": 0.8452742724776947,
+              "cross_peak_label_fraction": 0.10416666666666667,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 350,
+              "md_steps": 42000,
+              "E_per_particle": 0.503007538928375,
+              "energy_span_last_blocks": 0.05401100890995103,
+              "energy_stationarity": {
+                "stationary": false,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.5136685107761093,
+                "late_first_half_mean": 0.519842370316108,
+                "late_second_half_mean": 0.5074946512361107,
+                "late_relative_drift": 0.024038302564704562,
+                "late_relative_slope_over_window": 0.037396791271018394,
+                "late_linear_slope_per_sample": -0.0038419108159978045
+              },
+              "swap_attempts": 67200,
+              "swap_accepted": 3926,
+              "swap_acceptance": 0.05842261904761905,
+              "swap_label_correlation": 0.8431116492663931,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 375,
+              "md_steps": 45000,
+              "E_per_particle": 0.5054919330928984,
+              "energy_span_last_blocks": 0.039797614105512635,
+              "energy_stationarity": {
+                "stationary": false,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.5107703886199598,
+                "late_first_half_mean": 0.5160448671318383,
+                "late_second_half_mean": 0.5054959101080814,
+                "late_relative_drift": 0.02065303169249675,
+                "late_relative_slope_over_window": 0.031007693104449643,
+                "late_linear_slope_per_sample": -0.0031675622914336386
+              },
+              "swap_attempts": 72000,
+              "swap_accepted": 4206,
+              "swap_acceptance": 0.058416666666666665,
+              "swap_label_correlation": 0.8312705841003022,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 400,
+              "md_steps": 48000,
+              "E_per_particle": 0.5035822806585027,
+              "energy_span_last_blocks": 0.03229733631209886,
+              "energy_stationarity": {
+                "stationary": false,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.5085417912696941,
+                "late_first_half_mean": 0.5130563316461295,
+                "late_second_half_mean": 0.5040272508932587,
+                "late_relative_drift": 0.017754845143262594,
+                "late_relative_slope_over_window": 0.0290805955390994,
+                "late_linear_slope_per_sample": -0.002957739629328617
+              },
+              "swap_attempts": 76800,
+              "swap_accepted": 4496,
+              "swap_acceptance": 0.058541666666666665,
+              "swap_label_correlation": 0.8210391576573928,
+              "cross_peak_label_fraction": 0.125,
+              "swap_healthy": true,
+              "converged": false
+            },
+            {
+              "sweep": 425,
+              "md_steps": 51000,
+              "E_per_particle": 0.5018408731775095,
+              "energy_span_last_blocks": 0.030810104524156556,
+              "energy_stationarity": {
+                "stationary": true,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.5055665067728737,
+                "late_first_half_mean": 0.5074946512361107,
+                "late_second_half_mean": 0.5036383623096369,
+                "late_relative_drift": 0.007627659021736322,
+                "late_relative_slope_over_window": 0.016663048700606524,
+                "late_linear_slope_per_sample": -0.0016848558647503827
+              },
+              "swap_attempts": 81600,
+              "swap_accepted": 4752,
+              "swap_acceptance": 0.05823529411764706,
+              "swap_label_correlation": 0.8146496049718972,
+              "cross_peak_label_fraction": 0.125,
+              "swap_healthy": true,
+              "converged": false
+            },
+            {
+              "sweep": 450,
+              "md_steps": 54000,
+              "E_per_particle": 0.4986094600485903,
+              "energy_span_last_blocks": 0.034041517653075726,
+              "energy_stationarity": {
+                "stationary": true,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.5034200573681411,
+                "late_first_half_mean": 0.5054959101080814,
+                "late_second_half_mean": 0.501344204628201,
+                "late_relative_drift": 0.008247000529906099,
+                "late_relative_slope_over_window": 0.014842373876552361,
+                "late_linear_slope_per_sample": -0.0014943897416826778
+              },
+              "swap_attempts": 86400,
+              "swap_accepted": 5025,
+              "swap_acceptance": 0.058159722222222224,
+              "swap_label_correlation": 0.8189928093758726,
+              "cross_peak_label_fraction": 0.13541666666666666,
+              "swap_healthy": true,
+              "converged": false
+            },
+            {
+              "sweep": 475,
+              "md_steps": 57000,
+              "E_per_particle": 0.49244783310342216,
+              "energy_span_last_blocks": 0.03677812380593132,
+              "energy_stationarity": {
+                "stationary": false,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.5008299865015496,
+                "late_first_half_mean": 0.5040272508932587,
+                "late_second_half_mean": 0.49763272210984066,
+                "late_relative_drift": 0.01276786325851972,
+                "late_relative_slope_over_window": 0.021446501026907178,
+                "late_linear_slope_per_sample": -0.0021482101639622784
+              },
+              "swap_attempts": 91200,
+              "swap_accepted": 5285,
+              "swap_acceptance": 0.05794956140350877,
+              "swap_label_correlation": 0.818090056479452,
+              "cross_peak_label_fraction": 0.13541666666666666,
+              "swap_healthy": true,
+              "converged": false
+            },
+            {
+              "sweep": 500,
+              "md_steps": 60000,
+              "E_per_particle": 0.488596636364625,
+              "energy_span_last_blocks": 0.03428402966517019,
+              "energy_stationarity": {
+                "stationary": false,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.4984281694075913,
+                "late_first_half_mean": 0.5036383623096369,
+                "late_second_half_mean": 0.49321797650554583,
+                "late_relative_drift": 0.020906494543589373,
+                "late_relative_slope_over_window": 0.03471233508774279,
+                "late_linear_slope_per_sample": -0.0034603211267293077
+              },
+              "swap_attempts": 96000,
+              "swap_accepted": 5566,
+              "swap_acceptance": 0.057979166666666665,
+              "swap_label_correlation": 0.8256546204729698,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 525,
+              "md_steps": 63000,
+              "E_per_particle": 0.4940586392844583,
+              "energy_span_last_blocks": 0.031095943793806646,
+              "energy_stationarity": {
+                "stationary": false,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.49652262043951795,
+                "late_first_half_mean": 0.501344204628201,
+                "late_second_half_mean": 0.49170103625083517,
+                "late_relative_drift": 0.01942140796894556,
+                "late_relative_slope_over_window": 0.026904987494043117,
+                "late_linear_slope_per_sample": -0.0026717869786869494
+              },
+              "swap_attempts": 100800,
+              "swap_accepted": 5863,
+              "swap_acceptance": 0.05816468253968254,
+              "swap_label_correlation": 0.8257986399060936,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 550,
+              "md_steps": 66000,
+              "E_per_particle": 0.492156337199318,
+              "energy_span_last_blocks": 0.031095943793806646,
+              "energy_stationarity": {
+                "stationary": true,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.4946182965296539,
+                "late_first_half_mean": 0.49763272210984066,
+                "late_second_half_mean": 0.49160387094946717,
+                "late_relative_drift": 0.012188896372562808,
+                "late_relative_slope_over_window": 0.019041043332866874,
+                "late_linear_slope_per_sample": -0.0018836096834899871
+              },
+              "swap_attempts": 105600,
+              "swap_accepted": 6185,
+              "swap_acceptance": 0.05857007575757576,
+              "swap_label_correlation": 0.8163445548715773,
+              "cross_peak_label_fraction": 0.10416666666666667,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 575,
+              "md_steps": 69000,
+              "E_per_particle": 0.48960963102882943,
+              "energy_span_last_blocks": 0.022891520112361285,
+              "energy_stationarity": {
+                "stationary": true,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.49257975617154054,
+                "late_first_half_mean": 0.49321797650554583,
+                "late_second_half_mean": 0.49194153583753525,
+                "late_relative_drift": 0.0025913380564630056,
+                "late_relative_slope_over_window": 0.01172011214861667,
+                "late_linear_slope_per_sample": -0.001154617996893742
+              },
+              "swap_attempts": 110400,
+              "swap_accepted": 6490,
+              "swap_acceptance": 0.058786231884057974,
+              "swap_label_correlation": 0.8181810870184929,
+              "cross_peak_label_fraction": 0.10416666666666667,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 600,
+              "md_steps": 72000,
+              "E_per_particle": 0.49657488083439993,
+              "energy_span_last_blocks": 0.01939162193834565,
+              "energy_stationarity": {
+                "stationary": true,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.4922406596358422,
+                "late_first_half_mean": 0.49170103625083517,
+                "late_second_half_mean": 0.49278028302084914,
+                "late_relative_drift": 0.0021925185351661072,
+                "late_relative_slope_over_window": 0.006318605148044817,
+                "late_linear_slope_per_sample": 0.0006220548732104018
+              },
+              "swap_attempts": 115200,
+              "swap_accepted": 6770,
+              "swap_acceptance": 0.05876736111111111,
+              "swap_label_correlation": 0.8016564398460204,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 625,
+              "md_steps": 75000,
+              "E_per_particle": 0.49717870922176566,
+              "energy_span_last_blocks": 0.01689529672827339,
+              "energy_stationarity": {
+                "stationary": true,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.49302913898889944,
+                "late_first_half_mean": 0.49160387094946717,
+                "late_second_half_mean": 0.49445440702833166,
+                "late_relative_drift": 0.005781678715197937,
+                "late_relative_slope_over_window": 0.013882802390399365,
+                "late_linear_slope_per_sample": 0.0013689252218583269
+              },
+              "swap_attempts": 120000,
+              "swap_accepted": 7054,
+              "swap_acceptance": 0.05878333333333333,
+              "swap_label_correlation": 0.8161528215095977,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 650,
+              "md_steps": 78000,
+              "E_per_particle": 0.5000004672305306,
+              "energy_span_last_blocks": 0.01689529672827339,
+              "energy_stationarity": {
+                "stationary": true,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.49492977746655037,
+                "late_first_half_mean": 0.49194153583753525,
+                "late_second_half_mean": 0.49791801909556543,
+                "late_relative_drift": 0.012075416614903724,
+                "late_relative_slope_over_window": 0.014934732146138455,
+                "late_linear_slope_per_sample": 0.0014783287315221683
+              },
+              "swap_attempts": 124800,
+              "swap_accepted": 7373,
+              "swap_acceptance": 0.05907852564102564,
+              "swap_label_correlation": 0.8209400350578387,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 675,
+              "md_steps": 81000,
+              "E_per_particle": 0.49613558970507765,
+              "energy_span_last_blocks": 0.01498564429387772,
+              "energy_stationarity": {
+                "stationary": true,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.4952759358699869,
+                "late_first_half_mean": 0.49278028302084914,
+                "late_second_half_mean": 0.4977715887191246,
+                "late_relative_drift": 0.010077828008154405,
+                "late_relative_slope_over_window": 0.014904418722955426,
+                "late_linear_slope_per_sample": 0.0014763599863219807
+              },
+              "swap_attempts": 129600,
+              "swap_accepted": 7666,
+              "swap_acceptance": 0.05915123456790124,
+              "swap_label_correlation": 0.8163188616357424,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 700,
+              "md_steps": 84000,
+              "E_per_particle": 0.5000711229877708,
+              "energy_span_last_blocks": 0.013244236812884447,
+              "energy_stationarity": {
+                "stationary": true,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.49659506683472904,
+                "late_first_half_mean": 0.49445440702833166,
+                "late_second_half_mean": 0.4987357266411263,
+                "late_relative_drift": 0.008621349463021373,
+                "late_relative_slope_over_window": 0.015480087157328655,
+                "late_linear_slope_per_sample": 0.001537466983300211
+              },
+              "swap_attempts": 134400,
+              "swap_accepted": 7954,
+              "swap_acceptance": 0.05918154761904762,
+              "swap_label_correlation": 0.8022648599938187,
+              "cross_peak_label_fraction": 0.11458333333333333,
+              "swap_healthy": false,
+              "converged": false
+            },
+            {
+              "sweep": 725,
+              "md_steps": 87000,
+              "E_per_particle": 0.4919878692400709,
+              "energy_span_last_blocks": 0.011474486623145763,
+              "energy_stationarity": {
+                "stationary": true,
+                "tolerance": 0.02,
+                "n_samples": 12,
+                "late_n_samples": 6,
+                "late_mean": 0.496991439869936,
+                "late_first_half_mean": 0.49791801909556543,
+                "late_second_half_mean": 0.4960648606443064,
+                "late_relative_drift": 0.0037287532592996534,
+                "late_relative_slope_over_window": 0.005209257356287943,
+                "late_linear_slope_per_sample": -0.0005177912628309201
+              },
+              "swap_attempts": 139200,
+              "swap_accepted": 8287,
+              "swap_acceptance": 0.05953304597701149,
+              "swap_label_correlation": 0.8115947046624381,
+              "cross_peak_label_fraction": 0.125,
+              "swap_healthy": true,
+              "converged": true
+            }
+          ]
+        },
+        "cage_gate": {
+          "kind": "breadth_stationary_nve_cage_gate",
+          "branches": 8,
+          "steps": 6000,
+          "stride": 100,
+          "dt": 0.01,
+          "physical_time": 60.0,
+          "elapsed_seconds": 36.090996874962,
+          "u2_cage_curve": [
+            4.391584559885919e-31,
+            0.012070048087857202,
+            0.017465973099562066,
+            0.02647248129280799,
+            0.030935445932436276,
+            0.03342197790184583,
+            0.038747111195096,
+            0.0402243446339417,
+            0.04196168136666748,
+            0.04364769803173076,
+            0.04491688551159992,
+            0.048257204235524535,
+            0.05100248889778038,
+            0.054620192467890794,
+            0.0554196209082001,
+            0.056858517557715316,
+            0.05768380723654326,
+            0.06305721426130635,
+            0.06531231116912185,
+            0.06420750066007504,
+            0.06567370085602692,
+            0.07067329262960904,
+            0.07846594871546088,
+            0.08937670628423451,
+            0.09555565094666513,
+            0.09384178620601287,
+            0.10071183036873439,
+            0.10435432526353668,
+            0.10914118728541211,
+            0.11032714338348715,
+            0.11002919491930808,
+            0.11386048139157712,
+            0.11972179687024709,
+            0.12235144999566107,
+            0.12477331183467917,
+            0.13543116232421473,
+            0.1458151564412171,
+            0.1483825492719768,
+            0.14139061900756483,
+            0.13988226346466223,
+            0.1398284510594039,
+            0.1390842567590889,
+            0.1313524146467401,
+            0.13108180666390634,
+            0.13202726415450164,
+            0.13396529780198202,
+            0.14242110110661244,
+            0.1425273032881132,
+            0.14755370829878314,
+            0.14335558672365836,
+            0.13782402586327877,
+            0.14429295213625615,
+            0.1425077763369925,
+            0.13835639992408313,
+            0.14005535501435426,
+            0.141963541745994,
+            0.15085545244902981,
+            0.15438281736769685,
+            0.15605883219135905,
+            0.15183847719767146,
+            0.15657969357314114
+          ],
+          "msd_rel_parent_curve": [
+            0.0,
+            0.027872232464268103,
+            0.0271306223318427,
+            0.03690712089052782,
+            0.043115880341460744,
+            0.0455051673874294,
+            0.051027817880126426,
+            0.053120002990935784,
+            0.056370924640197585,
+            0.05936783380664334,
+            0.06081081374919378,
+            0.06314914072018422,
+            0.06585147605949121,
+            0.07021062787697598,
+            0.07404484116502608,
+            0.074728583211486,
+            0.07652577706273676,
+            0.08282092410219634,
+            0.0865879204970084,
+            0.0876249556764573,
+            0.08767396617426755,
+            0.09133565162240552,
+            0.09789395702851263,
+            0.1062616570753006,
+            0.11218917312870667,
+            0.11016567310743268,
+            0.12086202032879718,
+            0.1252514511710104,
+            0.1316430701504449,
+            0.12994902904677944,
+            0.12786862760828457,
+            0.1294988470334033,
+            0.1353293785455677,
+            0.14039310971271457,
+            0.14271031435403245,
+            0.14441696525528847,
+            0.14954550631234845,
+            0.14784499340881474,
+            0.14480810958437465,
+            0.14034329588012218,
+            0.13748430438933343,
+            0.14081172470654957,
+            0.13854482731942086,
+            0.13928430788380183,
+            0.14010676719004386,
+            0.14027127109924387,
+            0.1448134268457453,
+            0.1502359331727031,
+            0.15382090241722093,
+            0.14828790449469478,
+            0.14763338142707796,
+            0.14972449266838483,
+            0.150543887866213,
+            0.15013259852523844,
+            0.15432471100169376,
+            0.1546077164711088,
+            0.1526209550015681,
+            0.15903507555119564,
+            0.16056303547851536,
+            0.15415528535419076,
+            0.1600890311127052
+          ],
+          "u2_cage_plateau": 0.13869517741366952,
+          "u_DW": 0.37241801435170874,
+          "intrinsic_pairwise_divergence_per_particle": 0.19028382071299854,
+          "intrinsic_pairwise_c": 0.5109415049221974,
+          "u2_cage_stationarity": {
+            "stationary": false,
+            "tolerance": 0.1,
+            "n_samples": 61,
+            "late_n_samples": 31,
+            "late_mean": 0.13869517741366952,
+            "late_first_half_mean": 0.13166747858698327,
+            "late_second_half_mean": 0.1452836450636879,
+            "late_relative_drift": 0.09817332318695784,
+            "late_relative_slope_over_window": 0.21195151916624067,
+            "late_linear_slope_per_sample": 0.000979888451795284
+          },
+          "msd_rel_parent_stationarity": {
+            "stationary": false,
+            "tolerance": 0.1,
+            "n_samples": 61,
+            "late_n_samples": 31,
+            "late_mean": 0.14612421573134193,
+            "late_first_half_mean": 0.1399327386122734,
+            "late_second_half_mean": 0.1519287255304687,
+            "late_relative_drift": 0.08209444860426589,
+            "late_relative_slope_over_window": 0.15745563938325396,
+            "late_linear_slope_per_sample": 0.0007669360605784994
+          },
+          "nve_relative_energy_spans": [
+            0.00012844337811798685,
+            0.00013864831463937367,
+            0.0001394186791080974,
+            0.00012960577327504806,
+            0.00011775473053233432,
+            0.00012342576492905608,
+            0.00013470547562578834,
+            0.00016081537608163466
+          ],
+          "nve_energy_stable": true,
+          "stationary": false
+        }
+      },
+      "attempts": [
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke/equilibration.json",
+          "temperature": 0.1,
+          "peak_width": 0.1,
+          "measured_outer_peak_ratio": 1.6335414755818571,
+          "equilibration_converged": false,
+          "cage_stationary": false,
+          "u2_late_relative_drift": null,
+          "u2_late_relative_slope": null,
+          "parent_msd_late_relative_drift": null,
+          "parent_msd_late_relative_slope": null,
+          "wall_seconds": 36.62642037495971
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_T0080/equilibration.json",
+          "temperature": 0.08,
+          "peak_width": 0.14,
+          "measured_outer_peak_ratio": 1.6469774843097587,
+          "equilibration_converged": false,
+          "cage_stationary": false,
+          "u2_late_relative_drift": null,
+          "u2_late_relative_slope": null,
+          "parent_msd_late_relative_drift": null,
+          "parent_msd_late_relative_slope": null,
+          "wall_seconds": 87.59368345804978
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_T0080_long/equilibration.json",
+          "temperature": 0.08,
+          "peak_width": 0.14,
+          "measured_outer_peak_ratio": 1.6469774843097587,
+          "equilibration_converged": true,
+          "cage_stationary": false,
+          "u2_late_relative_drift": 0.15208697954026454,
+          "u2_late_relative_slope": 0.3756124359705837,
+          "parent_msd_late_relative_drift": 0.11378948414499107,
+          "parent_msd_late_relative_slope": 0.2826805850971014,
+          "wall_seconds": 144.75083687505685
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_T0090/equilibration.json",
+          "temperature": 0.09,
+          "peak_width": 0.14,
+          "measured_outer_peak_ratio": 1.6469774843097587,
+          "equilibration_converged": true,
+          "cage_stationary": false,
+          "u2_late_relative_drift": 0.27375972571434276,
+          "u2_late_relative_slope": 0.4419710196287559,
+          "parent_msd_late_relative_drift": 0.25527730522984426,
+          "parent_msd_late_relative_slope": 0.42879677402377153,
+          "wall_seconds": 104.23346358304843
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_T0090_t120/equilibration.json",
+          "temperature": 0.09,
+          "peak_width": 0.14,
+          "measured_outer_peak_ratio": 1.6469774843097587,
+          "equilibration_converged": true,
+          "cage_stationary": false,
+          "u2_late_relative_drift": 0.14582727472819854,
+          "u2_late_relative_slope": 0.26976619736104396,
+          "parent_msd_late_relative_drift": 0.1330040459981419,
+          "parent_msd_late_relative_slope": 0.2808776018966826,
+          "wall_seconds": 141.94630049914122
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_w014/equilibration.json",
+          "temperature": 0.1,
+          "peak_width": 0.14,
+          "measured_outer_peak_ratio": 1.6469774843097587,
+          "equilibration_converged": true,
+          "cage_stationary": false,
+          "u2_late_relative_drift": 0.2675801192190524,
+          "u2_late_relative_slope": 0.42568755686109694,
+          "parent_msd_late_relative_drift": 0.13964383087857563,
+          "parent_msd_late_relative_slope": 0.23015045586487956,
+          "wall_seconds": 44.83099283312913
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_w018_T0080/equilibration.json",
+          "temperature": 0.08,
+          "peak_width": 0.18,
+          "measured_outer_peak_ratio": 1.6604246099779778,
+          "equilibration_converged": true,
+          "cage_stationary": false,
+          "u2_late_relative_drift": 0.09817332318695784,
+          "u2_late_relative_slope": 0.21195151916624067,
+          "parent_msd_late_relative_drift": 0.08209444860426589,
+          "parent_msd_late_relative_slope": 0.15745563938325396,
+          "wall_seconds": 123.62908729189076
+        }
+      ],
+      "verdict": {
+        "stationary_no_aging_parent": false,
+        "cone_run": false,
+        "cage_ceiling_tested": false,
+        "law_holds": null,
+        "reason": "All seven parameter/horizon candidates failed the stationary-cage gate. The final width-0.18, T=0.08 candidate mixed across peaks but retained 15.7-21.2% late-window cage/MSD slopes."
+      }
+    }
+  },
+  "cage_ceiling": {
+    "law_interval": [
+      1.23,
+      1.3
+    ],
+    "n_confirmed": 6,
+    "catalog": [
+      {
+        "model": "flagship_r12",
+        "empirical_c": [
+          1.2473440820478192
+        ],
+        "intrinsic_pairwise_c": [
+          1.2458001788196529
+        ],
+        "source": "runs/dw_identity/dw_identity.json",
+        "confirmed": true
+      },
+      {
+        "model": "additive_delta0",
+        "empirical_c": [
+          1.2463993761872443
+        ],
+        "intrinsic_pairwise_c": [
+          1.286960253816392
+        ],
+        "source": "runs/second_model/cone_sm-n12add-T0060-h4000.json",
+        "confirmed": true,
+        "caveat": "T=0.10 horizon-2000 empirical c=1.202 under-fills; its intrinsic c is 1.284."
+      },
+      {
+        "model": "hard_r18",
+        "empirical_c": [
+          1.2678986875667597,
+          1.2381923290782506
+        ],
+        "intrinsic_pairwise_c": [
+          1.271403027128103,
+          1.2671833889320547
+        ],
+        "source": [
+          "runs/second_model/cone_sm-n18-T0030-h4000.json",
+          "runs/second_model/cone_sm-n18-T0050.json"
+        ],
+        "confirmed": true
+      },
+      {
+        "model": "bimodal_ratio1.4",
+        "empirical_c": [
+          1.2346698390797193
+        ],
+        "intrinsic_pairwise_c": [
+          1.2392421825022757
+        ],
+        "source": "runs/bimodal/bimodal_result.json",
+        "confirmed": true
+      },
+      {
+        "model": "soft_r8",
+        "empirical_c": [
+          1.2691681886407293
+        ],
+        "intrinsic_pairwise_c": [
+          1.271766503861022
+        ],
+        "source": "runs/breadth/soft_r8/cone_analysis.json",
+        "confirmed": true
+      },
+      {
+        "model": "trimodal",
+        "empirical_c": [
+          1.2694550647157505
+        ],
+        "intrinsic_pairwise_c": [
+          1.2671830615786075
+        ],
+        "source": "runs/breadth/trimodal/cone_analysis.json",
+        "confirmed": true
+      }
+    ],
+    "verdict": "six distinct glass formers confirm; extreme bimodal remains unmeasured"
+  },
+  "separation": {
+    "schema_version": 1,
+    "kind": "pooled_cross_model_entropy_stiffness_separation",
+    "n_states": 12,
+    "n_models": 6,
+    "models": [
+      "additive_delta0",
+      "bimodal",
+      "flagship",
+      "hard_r18",
+      "soft_r8",
+      "trimodal"
+    ],
+    "rows": [
+      {
+        "state_id": "flagship_T0.075",
+        "model": "flagship",
+        "temperature": 0.075,
+        "exponent": 12,
+        "nonadditivity": 0.2,
+        "source_kind": "pt",
+        "parent": "runs/gardner/bridge-Tladder--c4-unpert/parent_state.pt",
+        "lambda": 0.9661368965797221,
+        "true_s_c": 1.6814570874650416,
+        "saved_c_T": 2.9890143876661868,
+        "lambda_source": "runs/vb_elastic_cone/vb_elastic_cone.json",
+        "equilibration_note": "flagship equilibrated temperature-ladder parent",
+        "N": 1500,
+        "volume": 1500.000068983103,
+        "density": 0.9999999540112668,
+        "G_inf_affine_xy_thermal_parent": 8.93420700967547,
+        "c_T": 2.989014456396682,
+        "c_T_saved_verification": {
+          "saved_c_T": 2.9890143876661868,
+          "recomputed_c_T": 2.989014456396682,
+          "absolute_difference": 6.873049507305495e-08,
+          "matches_to_1e-10": false
+        },
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -4.917507156529899,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 0.19871620978770888,
+          "fmax": 9.980205707484559e-09,
+          "converged": true,
+          "fire_steps": 1221,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -4.407027864547924e-15,
+            1.6051297468750173e-14,
+            1.8734423052592724e-14,
+            0.2700234600900154,
+            0.3616594868715545,
+            0.3802550776306362,
+            0.4061114126727159,
+            0.4959111475060695
+          ],
+          "translation_eigenvalues": [
+            -4.407027864547924e-15,
+            1.6051297468750173e-14,
+            1.8734423052592724e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 0.2700234600900154,
+          "n_minor_coordinates": 4497,
+          "log_abs_determinant_translation_fixed_minor": 16957.585257694314,
+          "translation_normalization_log_N_cubed": 21.939661161270905,
+          "log_pseudodeterminant": 16979.524918855586,
+          "minimum_abs_U_diagonal": 4.861479789375545
+        },
+        "compute": {
+          "wall_seconds": 5.967649916070513,
+          "user_cpu_seconds": 5.627964,
+          "system_cpu_seconds": 4.310783
+        }
+      },
+      {
+        "state_id": "flagship_T0.090",
+        "model": "flagship",
+        "temperature": 0.09,
+        "exponent": 12,
+        "nonadditivity": 0.2,
+        "source_kind": "pt",
+        "parent": "runs/gardner/bridge-Tladder--c3-unpert/parent_state.pt",
+        "lambda": 1.0810198915735936,
+        "true_s_c": 1.9494038631389952,
+        "saved_c_T": 2.979080197994981,
+        "lambda_source": "runs/vb_elastic_cone/vb_elastic_cone.json",
+        "equilibration_note": "flagship equilibrated temperature-ladder parent",
+        "N": 1500,
+        "volume": 1500.000068983103,
+        "density": 0.9999999540112668,
+        "G_inf_affine_xy_thermal_parent": 8.874918826085814,
+        "c_T": 2.979080266497045,
+        "c_T_saved_verification": {
+          "saved_c_T": 2.979080197994981,
+          "recomputed_c_T": 2.979080266497045,
+          "absolute_difference": 6.850206402120307e-08,
+          "matches_to_1e-10": false
+        },
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -4.3994638344456085,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 0.2068603080909586,
+          "fmax": 9.979586558032624e-09,
+          "converged": true,
+          "fire_steps": 2157,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -1.313018011148305e-14,
+            5.308265051195398e-15,
+            2.052340736182421e-14,
+            0.19679020554970852,
+            0.2625477678136321,
+            0.39814842962929137,
+            0.45381158553480117,
+            0.5016930563315406
+          ],
+          "translation_eigenvalues": [
+            5.308265051195398e-15,
+            -1.313018011148305e-14,
+            2.052340736182421e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 0.19679020554970852,
+          "n_minor_coordinates": 4497,
+          "log_abs_determinant_translation_fixed_minor": 17043.25537324627,
+          "translation_normalization_log_N_cubed": 21.939661161270905,
+          "log_pseudodeterminant": 17065.19503440754,
+          "minimum_abs_U_diagonal": 4.462305476193907
+        },
+        "compute": {
+          "wall_seconds": 8.559230083948933,
+          "user_cpu_seconds": 8.823391,
+          "system_cpu_seconds": 6.890445999999999
+        }
+      },
+      {
+        "state_id": "flagship_T0.108",
+        "model": "flagship",
+        "temperature": 0.108,
+        "exponent": 12,
+        "nonadditivity": 0.2,
+        "source_kind": "pt",
+        "parent": "runs/gardner/bridge-Tladder--c2-unpert/parent_state.pt",
+        "lambda": 1.1801112380133876,
+        "true_s_c": 2.2339855913719724,
+        "saved_c_T": 3.0684314163506863,
+        "lambda_source": "runs/vb_elastic_cone/vb_elastic_cone.json",
+        "equilibration_note": "flagship equilibrated temperature-ladder parent",
+        "N": 1500,
+        "volume": 1500.000068983103,
+        "density": 0.9999999540112668,
+        "G_inf_affine_xy_thermal_parent": 9.41527135684788,
+        "c_T": 3.068431486907326,
+        "c_T_saved_verification": {
+          "saved_c_T": 3.0684314163506863,
+          "recomputed_c_T": 3.068431486907326,
+          "absolute_difference": 7.055663964194991e-08,
+          "matches_to_1e-10": false
+        },
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -3.8588765671109844,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 0.21534316445148974,
+          "fmax": 9.9011998325564e-09,
+          "converged": true,
+          "fire_steps": 1975,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -2.8060493696458707e-14,
+            1.2870360093034908e-14,
+            3.2126386574492396e-14,
+            0.22094333157637006,
+            0.27517536119693736,
+            0.33316659251207387,
+            0.4362987888592378,
+            0.46888351185008265
+          ],
+          "translation_eigenvalues": [
+            1.2870360093034908e-14,
+            -2.8060493696458707e-14,
+            3.2126386574492396e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 0.22094333157637006,
+          "n_minor_coordinates": 4497,
+          "log_abs_determinant_translation_fixed_minor": 17061.293653047225,
+          "translation_normalization_log_N_cubed": 21.939661161270905,
+          "log_pseudodeterminant": 17083.233314208497,
+          "minimum_abs_U_diagonal": 3.9438629599143518
+        },
+        "compute": {
+          "wall_seconds": 8.020991915953346,
+          "user_cpu_seconds": 8.447216999999998,
+          "system_cpu_seconds": 6.880067
+        }
+      },
+      {
+        "state_id": "flagship_T0.130",
+        "model": "flagship",
+        "temperature": 0.13,
+        "exponent": 12,
+        "nonadditivity": 0.2,
+        "source_kind": "pt",
+        "parent": "runs/gardner/bridge-Tladder--c1-unpert/parent_state.pt",
+        "lambda": 1.3042516821366448,
+        "true_s_c": 2.488983154113351,
+        "saved_c_T": 3.112771845249469,
+        "lambda_source": "runs/vb_elastic_cone/vb_elastic_cone.json",
+        "equilibration_note": "flagship equilibrated temperature-ladder parent",
+        "N": 1500,
+        "volume": 1500.000068983103,
+        "density": 0.9999999540112668,
+        "G_inf_affine_xy_thermal_parent": 9.689348560577784,
+        "c_T": 3.112771916825688,
+        "c_T_saved_verification": {
+          "saved_c_T": 3.112771845249469,
+          "recomputed_c_T": 3.112771916825688,
+          "absolute_difference": 7.157621917386336e-08,
+          "matches_to_1e-10": false
+        },
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -3.3445600240296054,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 0.22812764027684165,
+          "fmax": 9.430046676721371e-09,
+          "converged": true,
+          "fire_steps": 2447,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -6.8271079328849284e-15,
+            5.4213031416452e-15,
+            8.386772761375963e-15,
+            0.16274367901137393,
+            0.1901083219149104,
+            0.24115287955239265,
+            0.2708481345676671,
+            0.33161385967385826
+          ],
+          "translation_eigenvalues": [
+            5.4213031416452e-15,
+            -6.8271079328849284e-15,
+            8.386772761375963e-15
+          ],
+          "minimum_sampled_physical_eigenvalue": 0.16274367901137393,
+          "n_minor_coordinates": 4497,
+          "log_abs_determinant_translation_fixed_minor": 17185.860614445366,
+          "translation_normalization_log_N_cubed": 21.939661161270905,
+          "log_pseudodeterminant": 17207.800275606638,
+          "minimum_abs_U_diagonal": 5.824314425866051
+        },
+        "compute": {
+          "wall_seconds": 11.83393104095012,
+          "user_cpu_seconds": 11.423343000000003,
+          "system_cpu_seconds": 9.197433
+        }
+      },
+      {
+        "state_id": "flagship_T0.150",
+        "model": "flagship",
+        "temperature": 0.15,
+        "exponent": 12,
+        "nonadditivity": 0.2,
+        "source_kind": "pt",
+        "parent": "runs/gardner/bridge-Tladder--c0-unpert/parent_state.pt",
+        "lambda": 1.3469710939850674,
+        "true_s_c": 2.733759528663791,
+        "saved_c_T": 3.1926825411865942,
+        "lambda_source": "runs/vb_elastic_cone/vb_elastic_cone.json",
+        "equilibration_note": "flagship equilibrated temperature-ladder parent",
+        "N": 1500,
+        "volume": 1500.000068983103,
+        "density": 0.9999999540112668,
+        "G_inf_affine_xy_thermal_parent": 10.193221808797688,
+        "c_T": 3.1926826146003093,
+        "c_T_saved_verification": {
+          "saved_c_T": 3.1926825411865942,
+          "recomputed_c_T": 3.1926826146003093,
+          "absolute_difference": 7.34137151070513e-08,
+          "matches_to_1e-10": false
+        },
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -2.9248420052709485,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 0.2288737890831105,
+          "fmax": 9.7265909626644e-09,
+          "converged": true,
+          "fire_steps": 4833,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -3.8884935064802844e-15,
+            5.323654932804662e-15,
+            2.7020699975476455e-14,
+            0.10166280323849974,
+            0.1885617247226792,
+            0.2636713558391167,
+            0.36642866475119207,
+            0.41762295898198865
+          ],
+          "translation_eigenvalues": [
+            -3.8884935064802844e-15,
+            5.323654932804662e-15,
+            2.7020699975476455e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 0.10166280323849974,
+          "n_minor_coordinates": 4497,
+          "log_abs_determinant_translation_fixed_minor": 17213.75554587361,
+          "translation_normalization_log_N_cubed": 21.939661161270905,
+          "log_pseudodeterminant": 17235.69520703488,
+          "minimum_abs_U_diagonal": 4.569649760647581
+        },
+        "compute": {
+          "wall_seconds": 25.746384875033982,
+          "user_cpu_seconds": 22.362561,
+          "system_cpu_seconds": 18.170434000000004
+        }
+      },
+      {
+        "state_id": "additive_delta0_T0.060",
+        "model": "additive_delta0",
+        "temperature": 0.06,
+        "exponent": 12,
+        "nonadditivity": 0.0,
+        "source_kind": "npz",
+        "parent": "runs/second_model/scan_T0060.npz",
+        "lambda": 0.1830004466817033,
+        "true_s_c": null,
+        "saved_c_T": null,
+        "lambda_source": "runs/second_model/cone_sm-n12add-T0060-h4000.json",
+        "equilibration_metadata_converged": false,
+        "equilibration_note": "inherited swap parent used by the completed cone; legacy scan's strict composite flag is false and is retained as a pooled-data caveat",
+        "N": 1000,
+        "volume": 999.9999999999995,
+        "density": 1.0000000000000004,
+        "G_inf_affine_xy_thermal_parent": 21.19377976610082,
+        "c_T": 4.603670249496679,
+        "c_T_saved_verification": null,
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -7.275418857664349,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 1.182925667352055,
+          "fmax": 9.090463372134318e-09,
+          "converged": true,
+          "fire_steps": 519,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -9.813382405400091e-14,
+            -5.631637296258266e-14,
+            3.179588095959014e-14,
+            3.755467668566628,
+            3.978146186492601,
+            4.469137150477678,
+            4.6327078320718815,
+            4.650600302648351
+          ],
+          "translation_eigenvalues": [
+            3.179588095959014e-14,
+            -5.631637296258266e-14,
+            -9.813382405400091e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 3.755467668566628,
+          "n_minor_coordinates": 2997,
+          "log_abs_determinant_translation_fixed_minor": 14676.765749289709,
+          "translation_normalization_log_N_cubed": 20.72326583694641,
+          "log_pseudodeterminant": 14697.489015126655,
+          "minimum_abs_U_diagonal": 22.019860932489287
+        },
+        "compute": {
+          "wall_seconds": 1.980968666030094,
+          "user_cpu_seconds": 1.6893010000000004,
+          "system_cpu_seconds": 1.1296619999999962
+        }
+      },
+      {
+        "state_id": "additive_delta0_T0.100",
+        "model": "additive_delta0",
+        "temperature": 0.1,
+        "exponent": 12,
+        "nonadditivity": 0.0,
+        "source_kind": "npz",
+        "parent": "runs/second_model/scan_T0100.npz",
+        "lambda": 0.35674373049082436,
+        "true_s_c": null,
+        "saved_c_T": null,
+        "lambda_source": "runs/second_model/cone_sm-n12add-T0100.json",
+        "equilibration_metadata_converged": false,
+        "equilibration_note": "inherited swap parent used by the completed cone; legacy scan's strict composite flag is false and is retained as a pooled-data caveat",
+        "N": 1000,
+        "volume": 999.9999999999995,
+        "density": 1.0000000000000004,
+        "G_inf_affine_xy_thermal_parent": 21.42076415820444,
+        "c_T": 4.6282571404584285,
+        "c_T_saved_verification": null,
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -5.731161005873268,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 1.1898986468482768,
+          "fmax": 8.817714095064248e-09,
+          "converged": true,
+          "fire_steps": 448,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -7.328800291437166e-14,
+            -1.4838176542407745e-14,
+            8.017196432287378e-14,
+            3.8288204905336767,
+            3.9543641508891785,
+            4.053832416711543,
+            4.25941204316159,
+            4.348335115710113
+          ],
+          "translation_eigenvalues": [
+            -1.4838176542407745e-14,
+            -7.328800291437166e-14,
+            8.017196432287378e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 3.8288204905336767,
+          "n_minor_coordinates": 2997,
+          "log_abs_determinant_translation_fixed_minor": 14650.138834560898,
+          "translation_normalization_log_N_cubed": 20.72326583694641,
+          "log_pseudodeterminant": 14670.862100397844,
+          "minimum_abs_U_diagonal": 14.381760842932167
+        },
+        "compute": {
+          "wall_seconds": 1.7636690840590745,
+          "user_cpu_seconds": 1.5183650000000029,
+          "system_cpu_seconds": 0.977212999999999
+        }
+      },
+      {
+        "state_id": "hard_r18_T0.030",
+        "model": "hard_r18",
+        "temperature": 0.03,
+        "exponent": 18,
+        "nonadditivity": 0.2,
+        "source_kind": "npz",
+        "parent": "runs/second_model/scan_n18_T0030.npz",
+        "lambda": 0.3019390066346972,
+        "true_s_c": null,
+        "saved_c_T": null,
+        "lambda_source": "runs/second_model/cone_sm-n18-T0030-h4000.json",
+        "equilibration_metadata_converged": false,
+        "equilibration_note": "inherited swap parent used by the completed cone; legacy scan's strict composite flag is false and is retained as a pooled-data caveat",
+        "N": 1000,
+        "volume": 999.9999999999995,
+        "density": 1.0000000000000004,
+        "G_inf_affine_xy_thermal_parent": 11.798462510848282,
+        "c_T": 3.4348890099751808,
+        "c_T_saved_verification": null,
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -8.195284438738472,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 0.23056250386191807,
+          "fmax": 9.600105699735662e-09,
+          "converged": true,
+          "fire_steps": 792,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -1.2795779990909676e-14,
+            5.973888593555093e-16,
+            5.739990142224496e-14,
+            0.773225471310821,
+            0.9917991368901247,
+            1.104612272921497,
+            1.485215471880865,
+            1.6033932376146698
+          ],
+          "translation_eigenvalues": [
+            5.973888593555093e-16,
+            -1.2795779990909676e-14,
+            5.739990142224496e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 0.773225471310821,
+          "n_minor_coordinates": 2997,
+          "log_abs_determinant_translation_fixed_minor": 12361.772711161644,
+          "translation_normalization_log_N_cubed": 20.72326583694641,
+          "log_pseudodeterminant": 12382.49597699859,
+          "minimum_abs_U_diagonal": 4.500702022819405
+        },
+        "compute": {
+          "wall_seconds": 2.869213750003837,
+          "user_cpu_seconds": 2.418142000000003,
+          "system_cpu_seconds": 1.5989339999999999
+        }
+      },
+      {
+        "state_id": "hard_r18_T0.050",
+        "model": "hard_r18",
+        "temperature": 0.05,
+        "exponent": 18,
+        "nonadditivity": 0.2,
+        "source_kind": "npz",
+        "parent": "runs/second_model/scan_n18_T0050.npz",
+        "lambda": 0.5568652561226494,
+        "true_s_c": null,
+        "saved_c_T": null,
+        "lambda_source": "runs/second_model/cone_sm-n18-T0050.json",
+        "equilibration_metadata_converged": false,
+        "equilibration_note": "inherited swap parent used by the completed cone; legacy scan's strict composite flag is false and is retained as a pooled-data caveat",
+        "N": 1000,
+        "volume": 999.9999999999995,
+        "density": 1.0000000000000004,
+        "G_inf_affine_xy_thermal_parent": 12.408970001441942,
+        "c_T": 3.5226367966967493,
+        "c_T_saved_verification": null,
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -6.649125837062785,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 0.23719819353139607,
+          "fmax": 9.926433725949362e-09,
+          "converged": true,
+          "fire_steps": 576,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -2.4524029543700678e-15,
+            1.0405695814982258e-14,
+            4.630010681921469e-14,
+            1.100497568366858,
+            1.1663490615801895,
+            1.2479161871947253,
+            1.3139180361945262,
+            1.4017221268201934
+          ],
+          "translation_eigenvalues": [
+            -2.4524029543700678e-15,
+            1.0405695814982258e-14,
+            4.630010681921469e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 1.100497568366858,
+          "n_minor_coordinates": 2997,
+          "log_abs_determinant_translation_fixed_minor": 12331.344296663618,
+          "translation_normalization_log_N_cubed": 20.72326583694641,
+          "log_pseudodeterminant": 12352.067562500564,
+          "minimum_abs_U_diagonal": 5.094606313716236
+        },
+        "compute": {
+          "wall_seconds": 2.1970464169280604,
+          "user_cpu_seconds": 1.8548979999999986,
+          "system_cpu_seconds": 1.222009
+        }
+      },
+      {
+        "state_id": "bimodal_T0.100",
+        "model": "bimodal",
+        "temperature": 0.1,
+        "exponent": 12,
+        "nonadditivity": 0.2,
+        "source_kind": "pt",
+        "parent": "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged--c0-unpert/parent_state.pt",
+        "lambda": 0.9322486436856282,
+        "true_s_c": null,
+        "saved_c_T": null,
+        "lambda_source": "runs/bimodal/bimodal_result.json",
+        "equilibration_note": "stationary long-NVE bimodal cage certificate",
+        "N": 1500,
+        "volume": 1499.999999999999,
+        "density": 1.0000000000000007,
+        "G_inf_affine_xy_thermal_parent": 10.098568491471278,
+        "c_T": 3.1778244903504773,
+        "c_T_saved_verification": null,
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -4.339580403950455,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 0.26862135451199404,
+          "fmax": 9.756775249238492e-09,
+          "converged": true,
+          "fire_steps": 1780,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -1.6211323485248644e-14,
+            1.1681447491691463e-14,
+            1.8987158369263272e-14,
+            0.1395248604569105,
+            0.15463156775191683,
+            0.41465120756123514,
+            0.4671997020384839,
+            0.5599581193837688
+          ],
+          "translation_eigenvalues": [
+            1.1681447491691463e-14,
+            -1.6211323485248644e-14,
+            1.8987158369263272e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 0.1395248604569105,
+          "n_minor_coordinates": 4497,
+          "log_abs_determinant_translation_fixed_minor": 17811.217559587298,
+          "translation_normalization_log_N_cubed": 21.939661161270905,
+          "log_pseudodeterminant": 17833.15722074857,
+          "minimum_abs_U_diagonal": 4.743786655081694
+        },
+        "compute": {
+          "wall_seconds": 7.752425082959235,
+          "user_cpu_seconds": 6.51628199999999,
+          "system_cpu_seconds": 4.4556109999999975
+        }
+      },
+      {
+        "state_id": "soft_r8_T0.040",
+        "model": "soft_r8",
+        "temperature": 0.04,
+        "exponent": 8,
+        "nonadditivity": 0.2,
+        "source_kind": "npz",
+        "parent": "runs/breadth/soft_r8/parent_T0.040.npz",
+        "lambda": 0.4149538687420674,
+        "true_s_c": null,
+        "saved_c_T": null,
+        "lambda_source": "runs/breadth/soft_r8/cone_analysis.json",
+        "equilibration_note": "stationary full N=384 NVE cage certificate",
+        "N": 384,
+        "volume": 383.9999999999999,
+        "density": 1.0000000000000002,
+        "G_inf_affine_xy_thermal_parent": 4.939711983765104,
+        "c_T": 2.222546283829676,
+        "c_T_saved_verification": null,
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -6.168433161587738,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 0.13502832027776743,
+          "fmax": 9.644297663965962e-09,
+          "converged": true,
+          "fire_steps": 956,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            -1.1707885196481588e-14,
+            -8.552059831492937e-15,
+            -1.6111775440359713e-15,
+            0.4557836909243653,
+            0.5433066012534815,
+            0.7136945169854018,
+            0.8461939988733774,
+            0.9235974839950502
+          ],
+          "translation_eigenvalues": [
+            -1.6111775440359713e-15,
+            -8.552059831492937e-15,
+            -1.1707885196481588e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 0.4557836909243653,
+          "n_minor_coordinates": 1149,
+          "log_abs_determinant_translation_fixed_minor": 3843.9695935031705,
+          "translation_normalization_log_N_cubed": 17.85192765776318,
+          "log_pseudodeterminant": 3861.8215211609336,
+          "minimum_abs_U_diagonal": 4.98979325884592
+        },
+        "compute": {
+          "wall_seconds": 1.416331958025694,
+          "user_cpu_seconds": 1.0508989999999998,
+          "system_cpu_seconds": 0.9147509999999999
+        }
+      },
+      {
+        "state_id": "trimodal_T0.080",
+        "model": "trimodal",
+        "temperature": 0.08,
+        "exponent": 12,
+        "nonadditivity": 0.2,
+        "source_kind": "npz",
+        "parent": "runs/breadth/trimodal/parent_T0.080.npz",
+        "lambda": 0.5606179031900806,
+        "true_s_c": null,
+        "saved_c_T": null,
+        "lambda_source": "runs/breadth/trimodal/cone_analysis.json",
+        "equilibration_note": "stationary full N=384 NVE cage certificate",
+        "N": 384,
+        "volume": 383.9999999999999,
+        "density": 1.0000000000000002,
+        "G_inf_affine_xy_thermal_parent": 9.947718787226265,
+        "c_T": 3.1540004418557497,
+        "c_T_saved_verification": null,
+        "harmonic_proxy": {
+          "name": "classical_harmonic_basin_entropy_per_particle",
+          "symbol": "s_harm_proxy",
+          "value": -4.99178204107302,
+          "planck_constant": 1.0,
+          "mass": 1.0,
+          "expected_translation_modes": 3,
+          "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+          "is_not_configurational_entropy": true
+        },
+        "inherent_structure": {
+          "e_is_per_particle": 0.25873887644135984,
+          "fmax": 9.584047336373547e-09,
+          "converged": true,
+          "fire_steps": 708,
+          "lbfgs_outer_steps": 0,
+          "smallest_eigenvalues": [
+            5.904403293007009e-15,
+            1.7404470522580276e-14,
+            3.226802675244051e-14,
+            0.8523143775412951,
+            0.9205722915817418,
+            1.4076329032244943,
+            1.6251157476605995,
+            1.8574778191898464
+          ],
+          "translation_eigenvalues": [
+            5.904403293007009e-15,
+            1.7404470522580276e-14,
+            3.226802675244051e-14
+          ],
+          "minimum_sampled_physical_eigenvalue": 0.8523143775412951,
+          "n_minor_coordinates": 1149,
+          "log_abs_determinant_translation_fixed_minor": 4533.153753874621,
+          "translation_normalization_log_N_cubed": 17.85192765776318,
+          "log_pseudodeterminant": 4551.005681532384,
+          "minimum_abs_U_diagonal": 8.84107285921284
+        },
+        "compute": {
+          "wall_seconds": 1.152590333018452,
+          "user_cpu_seconds": 0.7668180000000007,
+          "system_cpu_seconds": 0.6276300000000035
+        }
+      }
+    ],
+    "entropy_scale": {
+      "flagship_true_s_c_available": true,
+      "true_s_c_available_for_nonflagship": false,
+      "pooled_quantity": "classical harmonic-basin entropy per particle",
+      "common_convention": "h=1, mass=1, epsilon=1, mean diameter=1, density=1",
+      "warning": "The pooled harmonic quantity is a vibrational basin entropy, not s_c. Without model-specific thermodynamic-integration ladders, a true pooled s_c test is unavailable."
+    },
+    "flagship_true_s_c_vs_c_T": {
+      "n": 5,
+      "pearson_r": 0.9582850073018381,
+      "spearman_r": 0.8999999999999998,
+      "slope": 0.2039528890150123,
+      "intercept": 2.616126977325385,
+      "R2": 0.9183101552194839,
+      "RMSE": 0.02275596215769503
+    },
+    "pooled_state_weighted": {
+      "harmonic_proxy_vs_c_T": {
+        "n": 12,
+        "pearson_r": -0.37329507908009973,
+        "spearman_r": -0.3846153846153847,
+        "slope": -0.15647442506714698,
+        "intercept": 2.521652635717485,
+        "R2": 0.13934921606541792,
+        "RMSE": 0.5993725161781083
+      },
+      "lambda_vs_harmonic_proxy": {
+        "n": 12,
+        "pearson_r": 0.9170728668242243,
+        "spearman_r": 0.9440559440559443,
+        "slope": 0.23660101800163522,
+        "intercept": 2.0035387953475237,
+        "R2": 0.8410226430652014,
+        "RMSE": 0.1585523347833333
+      },
+      "lambda_vs_c_T": {
+        "n": 12,
+        "pearson_r": -0.46933619230597695,
+        "spearman_r": -0.4895104895104896,
+        "slope": -0.28887217451922953,
+        "intercept": 1.7303777799995337,
+        "R2": 0.22027646140827298,
+        "RMSE": 0.3511359761441067
+      }
+    },
+    "model_mean_sensitivity": {
+      "rows": [
+        {
+          "model": "additive_delta0",
+          "n_states": 2,
+          "lambda": 0.2698720885862638,
+          "c_T": 4.6159636949775535,
+          "s_harm_proxy": -6.503289931768808
+        },
+        {
+          "model": "bimodal",
+          "n_states": 1,
+          "lambda": 0.9322486436856282,
+          "c_T": 3.1778244903504773,
+          "s_harm_proxy": -4.339580403950455
+        },
+        {
+          "model": "flagship",
+          "n_states": 5,
+          "lambda": 1.175698160457683,
+          "c_T": 3.06839614824541,
+          "s_harm_proxy": -3.889049917477409
+        },
+        {
+          "model": "hard_r18",
+          "n_states": 2,
+          "lambda": 0.4294021313786733,
+          "c_T": 3.478762903335965,
+          "s_harm_proxy": -7.422205137900629
+        },
+        {
+          "model": "soft_r8",
+          "n_states": 1,
+          "lambda": 0.4149538687420674,
+          "c_T": 2.222546283829676,
+          "s_harm_proxy": -6.168433161587738
+        },
+        {
+          "model": "trimodal",
+          "n_states": 1,
+          "lambda": 0.5606179031900806,
+          "c_T": 3.1540004418557497,
+          "s_harm_proxy": -4.99178204107302
+        }
+      ],
+      "harmonic_proxy_vs_c_T": {
+        "n": 6,
+        "pearson_r": -0.28986395700175493,
+        "spearman_r": -0.5428571428571429,
+        "slope": -0.16471663310741982,
+        "intercept": 2.371677990966194,
+        "R2": 0.08402111356871524,
+        "RMSE": 0.6782557063553833
+      },
+      "lambda_vs_harmonic_proxy": {
+        "n": 6,
+        "pearson_r": 0.8739503804587951,
+        "spearman_r": 0.8285714285714287,
+        "slope": 0.2234677050588364,
+        "intercept": 1.871245339012657,
+        "R2": 0.7637892675040727,
+        "RMSE": 0.1549834381870142
+      },
+      "lambda_vs_c_T": {
+        "n": 6,
+        "pearson_r": -0.31802327382268647,
+        "spearman_r": -0.3714285714285715,
+        "slope": -0.14310132575468382,
+        "intercept": 1.1007320537746152,
+        "R2": 0.10113880269289942,
+        "RMSE": 0.3023303831181563
+      }
+    },
+    "verdict": {
+      "flagship_collinearity_reproduced": true,
+      "proxy_cT_collinearity_below_0_9": true,
+      "lambda_higher_R2_for": "harmonic_proxy",
+      "true_cross_model_s_c_c_T_collinearity_broken": null,
+      "clean_entropy_vs_stiffness_separation": false,
+      "reason": "No common true configurational-entropy scale exists for the nonflagship models; the proxy analysis cannot by itself identify entropy control."
+    }
+  },
+  "verification": {
+    "schema_version": 1,
+    "kind": "breadth_independent_raw_verification",
+    "new_models": [
+      {
+        "model": "soft_r8",
+        "raw_paths": {
+          "cage": "runs/breadth/soft_r8/cage_raw.npz",
+          "cone_branches": "runs/breadth/soft_r8/campaign_root/runs/gardner"
+        },
+        "checks": {
+          "equilibrium_u_DW": {
+            "stored": 0.09515235668331261,
+            "recomputed": 0.09515235668331261,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          },
+          "equilibrium_intrinsic_pairwise": {
+            "stored": 0.1209913007208185,
+            "recomputed": 0.1209913007208185,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          },
+          "cone_lambda": {
+            "stored": 0.4149538687420674,
+            "recomputed": 0.4149538687420674,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          },
+          "cone_D_sat": {
+            "stored": 46.9448844409869,
+            "recomputed": 46.9448844409869,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          },
+          "cone_empirical_c": {
+            "stored": 1.2691681886407293,
+            "recomputed": 1.2691681886407293,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          },
+          "cone_intrinsic_c": {
+            "stored": 1.271766503861022,
+            "recomputed": 1.271766503861022,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          }
+        },
+        "stationarity_recomputed": {
+          "u2": {
+            "stationary": true,
+            "tolerance": 0.1,
+            "n_samples": 61,
+            "late_n_samples": 31,
+            "late_mean": 0.009053970982388346,
+            "late_first_half_mean": 0.00913202543899951,
+            "late_second_half_mean": 0.008980794929315377,
+            "late_relative_drift": 0.016703224472257014,
+            "late_relative_slope_over_window": 0.03477322497293646,
+            "late_linear_slope_per_sample": -1.049452566230095e-05
+          },
+          "msd": {
+            "stationary": true,
+            "tolerance": 0.1,
+            "n_samples": 61,
+            "late_n_samples": 31,
+            "late_mean": 0.017670885906820064,
+            "late_first_half_mean": 0.01778965920444048,
+            "late_second_half_mean": 0.017559535940300915,
+            "late_relative_drift": 0.013022734986407825,
+            "late_relative_slope_over_window": 0.018132299415641734,
+            "late_linear_slope_per_sample": -1.068045980673684e-05
+          }
+        },
+        "all_numeric_checks_match": true,
+        "stationarity_matches": true
+      },
+      {
+        "model": "trimodal",
+        "raw_paths": {
+          "cage": "runs/breadth/trimodal/cage_raw.npz",
+          "cone_branches": "runs/breadth/trimodal/campaign_root/runs/gardner"
+        },
+        "checks": {
+          "equilibrium_u_DW": {
+            "stored": 0.09961236271123754,
+            "recomputed": 0.09961236271123754,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          },
+          "equilibrium_intrinsic_pairwise": {
+            "stored": 0.1264416009018477,
+            "recomputed": 0.1264416009018477,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          },
+          "cone_lambda": {
+            "stored": 0.5606179031900806,
+            "recomputed": 0.5606179031900806,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          },
+          "cone_D_sat": {
+            "stored": 48.69961126983512,
+            "recomputed": 48.69961126983512,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          },
+          "cone_empirical_c": {
+            "stored": 1.2694550647157505,
+            "recomputed": 1.2694550647157505,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          },
+          "cone_intrinsic_c": {
+            "stored": 1.2671830615786075,
+            "recomputed": 1.2671830615786075,
+            "absolute_difference": 0.0,
+            "tolerance": 1e-10,
+            "matches": true
+          }
+        },
+        "stationarity_recomputed": {
+          "u2": {
+            "stationary": true,
+            "tolerance": 0.1,
+            "n_samples": 61,
+            "late_n_samples": 31,
+            "late_mean": 0.009922622804915147,
+            "late_first_half_mean": 0.01000812498324131,
+            "late_second_half_mean": 0.009842464512734371,
+            "late_relative_drift": 0.016695230058012406,
+            "late_relative_slope_over_window": 0.02897645667257887,
+            "late_linear_slope_per_sample": -9.584081659498892e-06
+          },
+          "msd": {
+            "stationary": true,
+            "tolerance": 0.1,
+            "n_samples": 61,
+            "late_n_samples": 31,
+            "late_mean": 0.01995160159778792,
+            "late_first_half_mean": 0.020106046518912995,
+            "late_second_half_mean": 0.01980680948423316,
+            "late_relative_drift": 0.014998146049238138,
+            "late_relative_slope_over_window": 0.013492619523669458,
+            "late_linear_slope_per_sample": -8.973312308226267e-06
+          }
+        },
+        "all_numeric_checks_match": true,
+        "stationarity_matches": true
+      }
+    ],
+    "pooled": {
+      "c_T_parent_recomputations": [
+        {
+          "state_id": "flagship_T0.075",
+          "stored": 2.989014456396682,
+          "recomputed": 2.989014456396682,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "flagship_T0.090",
+          "stored": 2.979080266497045,
+          "recomputed": 2.979080266497045,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "flagship_T0.108",
+          "stored": 3.068431486907326,
+          "recomputed": 3.068431486907326,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "flagship_T0.130",
+          "stored": 3.112771916825688,
+          "recomputed": 3.112771916825688,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "flagship_T0.150",
+          "stored": 3.1926826146003093,
+          "recomputed": 3.1926826146003093,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "additive_delta0_T0.060",
+          "stored": 4.603670249496679,
+          "recomputed": 4.603670249496679,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "additive_delta0_T0.100",
+          "stored": 4.6282571404584285,
+          "recomputed": 4.6282571404584285,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "hard_r18_T0.030",
+          "stored": 3.4348890099751808,
+          "recomputed": 3.4348890099751808,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "hard_r18_T0.050",
+          "stored": 3.5226367966967493,
+          "recomputed": 3.5226367966967493,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "bimodal_T0.100",
+          "stored": 3.1778244903504773,
+          "recomputed": 3.1778244903504773,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "soft_r8_T0.040",
+          "stored": 2.222546283829676,
+          "recomputed": 2.222546283829676,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        {
+          "state_id": "trimodal_T0.080",
+          "stored": 3.1540004418557497,
+          "recomputed": 3.1540004418557497,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        }
+      ],
+      "lambda_source_recomputations": [
+        {
+          "state_id": "flagship_T0.075",
+          "stored": 0.9661368965797221,
+          "recomputed": 0.9661368965797221,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "flagship_T0.090",
+          "stored": 1.0810198915735936,
+          "recomputed": 1.0810198915735936,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "flagship_T0.108",
+          "stored": 1.1801112380133876,
+          "recomputed": 1.1801112380133876,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "flagship_T0.130",
+          "stored": 1.3042516821366448,
+          "recomputed": 1.3042516821366448,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "flagship_T0.150",
+          "stored": 1.3469710939850674,
+          "recomputed": 1.3469710939850674,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "additive_delta0_T0.060",
+          "stored": 0.1830004466817033,
+          "recomputed": 0.1830004466817033,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "additive_delta0_T0.100",
+          "stored": 0.35674373049082436,
+          "recomputed": 0.35674373049082436,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "hard_r18_T0.030",
+          "stored": 0.3019390066346972,
+          "recomputed": 0.3019390066346972,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "hard_r18_T0.050",
+          "stored": 0.5568652561226494,
+          "recomputed": 0.5568652561226494,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "bimodal_T0.100",
+          "stored": 0.9322486436856282,
+          "recomputed": 0.9322486436856282,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "soft_r8_T0.040",
+          "stored": 0.4149538687420674,
+          "recomputed": 0.4149538687420674,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        },
+        {
+          "state_id": "trimodal_T0.080",
+          "stored": 0.5606179031900806,
+          "recomputed": 0.5606179031900806,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true
+        }
+      ],
+      "harmonic_formula_recomputations": [
+        {
+          "state_id": "flagship_T0.075",
+          "stored": -4.917507156529899,
+          "recomputed": -4.917507156529899,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "flagship_T0.090",
+          "stored": -4.3994638344456085,
+          "recomputed": -4.3994638344456085,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "flagship_T0.108",
+          "stored": -3.8588765671109844,
+          "recomputed": -3.8588765671109844,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "flagship_T0.130",
+          "stored": -3.3445600240296054,
+          "recomputed": -3.3445600240296054,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "flagship_T0.150",
+          "stored": -2.9248420052709485,
+          "recomputed": -2.9248420052709485,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "additive_delta0_T0.060",
+          "stored": -7.275418857664349,
+          "recomputed": -7.275418857664349,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "additive_delta0_T0.100",
+          "stored": -5.731161005873268,
+          "recomputed": -5.731161005873268,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "hard_r18_T0.030",
+          "stored": -8.195284438738472,
+          "recomputed": -8.195284438738472,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "hard_r18_T0.050",
+          "stored": -6.649125837062785,
+          "recomputed": -6.649125837062785,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "bimodal_T0.100",
+          "stored": -4.339580403950455,
+          "recomputed": -4.339580403950455,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "soft_r8_T0.040",
+          "stored": -6.168433161587738,
+          "recomputed": -6.168433161587738,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        },
+        {
+          "state_id": "trimodal_T0.080",
+          "stored": -4.99178204107302,
+          "recomputed": -4.99178204107302,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-12,
+          "matches": true,
+          "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+        }
+      ],
+      "correlation_recomputations": {
+        "proxy_vs_c_T": {
+          "stored": -0.37329507908009973,
+          "recomputed": -0.3732950790800998,
+          "absolute_difference": 5.551115123125783e-17,
+          "tolerance": 1e-14,
+          "matches": true
+        },
+        "lambda_vs_proxy": {
+          "stored": 0.9170728668242243,
+          "recomputed": 0.9170728668242244,
+          "absolute_difference": 1.1102230246251565e-16,
+          "tolerance": 1e-14,
+          "matches": true
+        },
+        "lambda_vs_c_T": {
+          "stored": -0.46933619230597695,
+          "recomputed": -0.46933619230597684,
+          "absolute_difference": 1.1102230246251565e-16,
+          "tolerance": 1e-14,
+          "matches": true
+        }
+      },
+      "all_c_T_match": true,
+      "all_lambda_match": true,
+      "all_harmonic_formula_match": true,
+      "all_correlations_match": true,
+      "hessian_raw_limit": "Full Hessian matrices were intentionally not persisted; the entropy check independently re-evaluates the paper formula from the stored sparse-LU log-pseudodeterminant and the stored eight-mode stability tail. Parent paths and minimizer diagnostics are persisted."
+    },
+    "compute": {
+      "wall_seconds": 3.3148068339796737,
+      "user_cpu_seconds": 2.8867969999999996,
+      "system_cpu_seconds": 0.9658689999999999
+    },
+    "all_checks_pass": true
+  },
+  "compute": {
+    "scope": "new breadth campaign only; inherited flagship/additive/r18/bimodal compute excluded",
+    "equilibration_and_stationarity_attempts": {
+      "n": 18,
+      "wall_seconds": 1815.2596510382136,
+      "hybrid_md_steps": 1230000,
+      "swap_attempts": 2275200,
+      "cage_branch_md_steps": 588000,
+      "rows": [
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke/equilibration.json",
+          "wall_seconds": 36.62642037495971,
+          "user_cpu_seconds": 30.188768,
+          "system_cpu_seconds": 20.444954,
+          "hybrid_md_steps": 42000,
+          "swap_attempts": 67200,
+          "cage_branch_md_steps": 0
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_T0080/equilibration.json",
+          "wall_seconds": 87.59368345804978,
+          "user_cpu_seconds": 73.451616,
+          "system_cpu_seconds": 47.230331,
+          "hybrid_md_steps": 96000,
+          "swap_attempts": 153600,
+          "cage_branch_md_steps": 0
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_T0080_long/equilibration.json",
+          "wall_seconds": 144.75083687505685,
+          "user_cpu_seconds": 122.899899,
+          "system_cpu_seconds": 81.424702,
+          "hybrid_md_steps": 120000,
+          "swap_attempts": 192000,
+          "cage_branch_md_steps": 48000
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_T0090/equilibration.json",
+          "wall_seconds": 104.23346358304843,
+          "user_cpu_seconds": 88.452416,
+          "system_cpu_seconds": 61.610433,
+          "hybrid_md_steps": 81000,
+          "swap_attempts": 129600,
+          "cage_branch_md_steps": 48000
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_T0090_t120/equilibration.json",
+          "wall_seconds": 141.94630049914122,
+          "user_cpu_seconds": 115.54004,
+          "system_cpu_seconds": 89.926829,
+          "hybrid_md_steps": 81000,
+          "swap_attempts": 129600,
+          "cage_branch_md_steps": 96000
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_w014/equilibration.json",
+          "wall_seconds": 44.83099283312913,
+          "user_cpu_seconds": 36.830833,
+          "system_cpu_seconds": 26.30741,
+          "hybrid_md_steps": 39000,
+          "swap_attempts": 62400,
+          "cage_branch_md_steps": 12000
+        },
+        {
+          "path": "runs/breadth/extreme_bimodal/smoke_w018_T0080/equilibration.json",
+          "wall_seconds": 123.62908729189076,
+          "user_cpu_seconds": 101.100577,
+          "system_cpu_seconds": 73.907911,
+          "hybrid_md_steps": 87000,
+          "swap_attempts": 139200,
+          "cage_branch_md_steps": 48000
+        },
+        {
+          "path": "runs/breadth/soft_r8/equilibration.json",
+          "wall_seconds": 346.95665799907874,
+          "user_cpu_seconds": 278.27810100000005,
+          "system_cpu_seconds": 187.050813,
+          "hybrid_md_steps": 120000,
+          "swap_attempts": 384000,
+          "cage_branch_md_steps": 48000
+        },
+        {
+          "path": "runs/breadth/soft_r8/smoke/equilibration.json",
+          "wall_seconds": 36.30640279198997,
+          "user_cpu_seconds": 30.819396,
+          "system_cpu_seconds": 21.658484,
+          "hybrid_md_steps": 36000,
+          "swap_attempts": 57600,
+          "cage_branch_md_steps": 8000
+        },
+        {
+          "path": "runs/breadth/soft_r8/smoke_T0040/equilibration.json",
+          "wall_seconds": 93.57796133297961,
+          "user_cpu_seconds": 77.93612,
+          "system_cpu_seconds": 57.215188,
+          "hybrid_md_steps": 72000,
+          "swap_attempts": 115200,
+          "cage_branch_md_steps": 48000
+        },
+        {
+          "path": "runs/breadth/soft_r8/smoke_T0050/equilibration.json",
+          "wall_seconds": 97.75921383395325,
+          "user_cpu_seconds": 79.05597,
+          "system_cpu_seconds": 60.034713,
+          "hybrid_md_steps": 72000,
+          "swap_attempts": 115200,
+          "cage_branch_md_steps": 48000
+        },
+        {
+          "path": "runs/breadth/soft_r8/smoke_T0060/equilibration.json",
+          "wall_seconds": 36.55613291601185,
+          "user_cpu_seconds": 30.770636,
+          "system_cpu_seconds": 20.697879,
+          "hybrid_md_steps": 42000,
+          "swap_attempts": 67200,
+          "cage_branch_md_steps": 0
+        },
+        {
+          "path": "runs/breadth/soft_r8/smoke_T0060_gate070/equilibration.json",
+          "wall_seconds": 37.07674141600728,
+          "user_cpu_seconds": 30.927227,
+          "system_cpu_seconds": 21.920436000000002,
+          "hybrid_md_steps": 36000,
+          "swap_attempts": 57600,
+          "cage_branch_md_steps": 8000
+        },
+        {
+          "path": "runs/breadth/trimodal/equilibration.json",
+          "wall_seconds": 214.0912992489757,
+          "user_cpu_seconds": 168.764885,
+          "system_cpu_seconds": 122.194843,
+          "hybrid_md_steps": 72000,
+          "swap_attempts": 230400,
+          "cage_branch_md_steps": 48000
+        },
+        {
+          "path": "runs/breadth/trimodal/smoke/equilibration.json",
+          "wall_seconds": 38.33466812490951,
+          "user_cpu_seconds": 31.228144999999998,
+          "system_cpu_seconds": 23.037574,
+          "hybrid_md_steps": 42000,
+          "swap_attempts": 67200,
+          "cage_branch_md_steps": 8000
+        },
+        {
+          "path": "runs/breadth/trimodal/smoke_T0080/equilibration.json",
+          "wall_seconds": 92.02326074999291,
+          "user_cpu_seconds": 74.60452699999999,
+          "system_cpu_seconds": 56.864013,
+          "hybrid_md_steps": 78000,
+          "swap_attempts": 124800,
+          "cage_branch_md_steps": 48000
+        },
+        {
+          "path": "runs/breadth/trimodal/smoke_robust/equilibration.json",
+          "wall_seconds": 89.34477091708686,
+          "user_cpu_seconds": 70.710594,
+          "system_cpu_seconds": 56.322154000000005,
+          "hybrid_md_steps": 72000,
+          "swap_attempts": 115200,
+          "cage_branch_md_steps": 48000
+        },
+        {
+          "path": "runs/breadth/trimodal/smoke_t60/equilibration.json",
+          "wall_seconds": 49.621756791952066,
+          "user_cpu_seconds": 39.36936,
+          "system_cpu_seconds": 30.840913999999998,
+          "hybrid_md_steps": 42000,
+          "swap_attempts": 67200,
+          "cage_branch_md_steps": 24000
+        }
+      ]
+    },
+    "successful_cones": {
+      "n": 2,
+      "wall_seconds": 741.1677917500492,
+      "branch_md_steps": 720000,
+      "particle_branch_md_steps": 276480000
+    },
+    "failed_three_site_cone_launch": {
+      "wall_seconds": 88.63,
+      "completed_unperturbed_branch_md_steps": 72000,
+      "completed_particle_branch_md_steps": 27648000,
+      "reason": "finite box could place only two of three radius-2.5 shell sites at min separation 5"
+    },
+    "harmonic_mechanics": {
+      "n_states": 12,
+      "wall_seconds": 79.26043312298134
+    },
+    "primary_compute_wall_seconds": 2724.3178759112443,
+    "primary_compute_wall_minutes": 45.40529793185407,
+    "raw_verification_reanalysis": {
+      "wall_seconds": 3.3148068339796737,
+      "user_cpu_seconds": 2.8867969999999996,
+      "system_cpu_seconds": 0.9658689999999999
+    },
+    "cost": "$0; local CPU/float64 (MPS unavailable for these launches)"
+  },
+  "final_verdict": {
+    "breadth": "2/3 requested new models certify and both confirm; extreme fails no-aging gate",
+    "entropy_vs_stiffness": "proxy collinearity is broken and lambda follows the harmonic proxy rather than c_T, but true entropy-vs-stiffness separation is not established without common true s_c",
+    "referee_objection_addressed": false
+  }
+}
