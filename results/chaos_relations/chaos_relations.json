@@ -1,0 +1,173 @@
+{
+  "ballistic": {
+    "candidate_lengths": {
+      "cage_resolution_a": {
+        "ell_c_over_length": 11.7887238766757,
+        "length_sigma": 0.3
+      },
+      "interparticle_spacing_rho^-1/3": {
+        "ell_c_over_length": 3.5366171630027097,
+        "length_sigma": 1.0
+      },
+      "plateau_length_D_sat_over_N": {
+        "ell_c_over_length": 23.750106846991837,
+        "length_sigma": 0.148909526419695
+      },
+      "potential_cutoff_1.25<sigma>": {
+        "ell_c_over_length": 2.829293730402168,
+        "length_sigma": 1.25
+      },
+      "u_DW_debye_waller": {
+        "ell_c_over_length": 29.62455522359866,
+        "length_sigma": 0.11938127463211572
+      },
+      "xi_PTS_lower_T0.13": {
+        "ell_c_over_length": 5.052310232861014,
+        "length_sigma": 0.7
+      },
+      "xi_PTS_upper_T0.13": {
+        "ell_c_over_length": 3.5366171630027097,
+        "length_sigma": 1.0
+      }
+    },
+    "closest_candidate": "potential_cutoff_1.25<sigma>",
+    "definition": "ell_c = v_b / lambda (front advance per Lyapunov e-fold)",
+    "linear_response": {
+      "by_N": {
+        "1500": {
+          "ell_c_median": 3.539263348976846,
+          "n": 18
+        },
+        "3000": {
+          "ell_c_median": 3.4108759444244807,
+          "n": 6
+        }
+      },
+      "delta": 0.01,
+      "ell_c_median": 3.5366171630027097,
+      "ell_c_median_ci95": [
+        3.395378479390926,
+        3.6060154064531518
+      ],
+      "ell_c_stats": {
+        "max": 4.056354016858571,
+        "mean": 3.406431354050639,
+        "median": 3.5366171630027097,
+        "min": 2.5809869746253464,
+        "n": 24,
+        "std": 0.38286801480297555
+      },
+      "intensive": true,
+      "intensive_rel_spread": 0.036945275233335344
+    },
+    "per_delta": [
+      {
+        "delta": 0.01,
+        "ell_c_median": 3.5366171630027097,
+        "lambda_median": 0.9072733239344162,
+        "n": 24,
+        "pearson_lambda_vb": -0.41100450457400217,
+        "v_b_median": 3.188093502773504
+      },
+      {
+        "delta": 0.03,
+        "ell_c_median": 2.4108256171206475,
+        "lambda_median": 0.9466640525507071,
+        "n": 24,
+        "pearson_lambda_vb": 0.03846000318284158,
+        "v_b_median": 2.3923449842427296
+      },
+      {
+        "delta": 0.1,
+        "ell_c_median": 1.8950561853921348,
+        "lambda_median": 1.1281019630063023,
+        "n": 22,
+        "pearson_lambda_vb": 0.6975914650971793,
+        "v_b_median": 2.190578636404876
+      }
+    ],
+    "pooled_pearson_lambda_vb": -0.36559505786200996,
+    "verdict": {
+      "ell_c_is_emergent_supra_static": true,
+      "v_b_equals_lambda_times_static_length": false
+    }
+  },
+  "closure": {
+    "holds": true,
+    "identity": "lambda * t_sat = ln(D_sat / D0)",
+    "n": 70,
+    "pearson_t_pred_vs_onset": 0.9871588443700979,
+    "per_run": {
+      "runs/gardner/gardner-T0075-fss": {
+        "n": 35,
+        "pearson": 0.9897012645185208,
+        "ratio_median": 0.963813108858071
+      },
+      "runs/gardner/gardner-T0075-m2": {
+        "n": 35,
+        "pearson": 0.9852917101711498,
+        "ratio_median": 0.9826968974670384
+      }
+    },
+    "ratio_median_ci95": [
+      0.9544333575077714,
+      0.9857611207578723
+    ],
+    "ratio_t_pred_over_onset": {
+      "max": 1.0500700882357532,
+      "mean": 0.9470702308432568,
+      "median": 0.9709242297998839,
+      "min": 0.8008802777968413,
+      "n": 70,
+      "std": 0.07925889180896813
+    },
+    "vs_t_shield": {
+      "pearson": 0.9917363312179822,
+      "ratio_median": 1.0772387740869007
+    }
+  },
+  "headline": {
+    "closure_holds": true,
+    "closure_pearson": 0.9871588443700979,
+    "ell_c_intensive": true,
+    "ell_c_sigma": 3.5366171630027097,
+    "h_KS_floor_bits_per_tu": 1.3109722110782986,
+    "h_KS_floor_nats_per_tu": 0.9086966919013602
+  },
+  "n_records": 70,
+  "pesin": {
+    "consistent_with_memory_ledger": true,
+    "h_KS_lower_bound_bits_per_tu": 1.3109722110782986,
+    "h_KS_lower_bound_nats_per_tu": 0.9086966919013602,
+    "lambda_max_nats_per_tu": 0.9086966919013602,
+    "memory_ledger_bits_per_tu": 1.3109722110782986,
+    "note": "The ledger's erasure rate is lambda_max/ln2 by construction (scripts/memory_ledger.py); agreement is a convention consistency check, not an independent measurement.",
+    "scrambling_budget_per_direction": {
+      "bits": 8.055236941849083,
+      "definition": "median ln(D_sat/D0) = lambda * t_sat (entropy e-folds spent between kick and DW plateau, per unstable direction)",
+      "nats": 5.583464774985008
+    },
+    "statement": "h_KS >= lambda_max (Pesin identity, lower bound: only lambda_max measured)"
+  },
+  "references": [
+    "Pesin, Russ. Math. Surveys 32, 55 (1977) [Pesin identity h_KS = sum lambda_i^+]",
+    "Khemani, Huse & Nahum, PRB 98, 144304 (2018) [VDLE lambda(v), lambda(v_b)=0]",
+    "Das, Chakrabarty, Dhar, Kundu, Huse, Moessner, Ray & Bhattacharjee, PRL 121, 024101 (2018) [classical butterfly cone: lambda + v_b]",
+    "Ruidas & Banerjee, arXiv:1906.00016 [many-body chaos (lambda, v_b) in liquids]",
+    "Blake, PRL 117, 091601 (2016) [chaos length v_B/lambda_L]"
+  ],
+  "runs": [
+    "runs/gardner/gardner-T0075-fss",
+    "runs/gardner/gardner-T0075-m2"
+  ],
+  "schema_version": 1,
+  "sources": {
+    "cone_summaries": [
+      "runs/gardner/gardner-T0075-fss/gardner_r0.json",
+      "runs/gardner/gardner-T0075-m2/gardner_r0.json"
+    ],
+    "density_provenance": "runs/gardner/gardner-T0075-fss--c0-unpert/parent_state.pt (box=11.4471^3, N=1500 -> rho=1.0000, <sigma>=1.0)",
+    "dw_identity": "runs/dw_identity/dw_identity.json",
+    "memory_ledger": "runs/memory_ledger/memory_ledger.json"
+  }
+}

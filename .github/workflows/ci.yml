@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: macos-14
+    timeout-minutes: 45
+    env:
+      OMP_NUM_THREADS: 1
+      MKL_NUM_THREADS: 1
+      OPENBLAS_NUM_THREADS: 1
+      VECLIB_MAXIMUM_THREADS: 1
+      PYTHONDONTWRITEBYTECODE: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v7
+        with:
+          python-version: "3.13.14"
+      - name: Place the environment outside the checkout
+        # The replay's last gate requires a clean working tree, so the venv is
+        # built in the runner scratch area rather than inside the checkout.
+        run: echo "UV_PROJECT_ENVIRONMENT=${RUNNER_TEMP}/venv" >> "$GITHUB_ENV"
+      - name: Install locked environment
+        run: uv sync --locked
+      - name: Run tests
+        run: uv run --frozen --no-sync python -m pytest -q
+      - name: Reproduce results
+        run: bash reproduce.sh

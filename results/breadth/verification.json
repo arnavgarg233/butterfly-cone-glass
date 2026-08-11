@@ -1,0 +1,506 @@
+{
+  "schema_version": 1,
+  "kind": "breadth_independent_raw_verification",
+  "new_models": [
+    {
+      "model": "soft_r8",
+      "raw_paths": {
+        "cage": "runs/breadth/soft_r8/cage_raw.npz",
+        "cone_branches": "runs/breadth/soft_r8/campaign_root/runs/gardner"
+      },
+      "checks": {
+        "equilibrium_u_DW": {
+          "stored": 0.09515235668331261,
+          "recomputed": 0.09515235668331261,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        "equilibrium_intrinsic_pairwise": {
+          "stored": 0.1209913007208185,
+          "recomputed": 0.1209913007208185,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        "cone_lambda": {
+          "stored": 0.4149538687420674,
+          "recomputed": 0.4149538687420674,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        "cone_D_sat": {
+          "stored": 46.9448844409869,
+          "recomputed": 46.9448844409869,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        "cone_empirical_c": {
+          "stored": 1.2691681886407293,
+          "recomputed": 1.2691681886407293,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        "cone_intrinsic_c": {
+          "stored": 1.271766503861022,
+          "recomputed": 1.271766503861022,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        }
+      },
+      "stationarity_recomputed": {
+        "u2": {
+          "stationary": true,
+          "tolerance": 0.1,
+          "n_samples": 61,
+          "late_n_samples": 31,
+          "late_mean": 0.009053970982388346,
+          "late_first_half_mean": 0.00913202543899951,
+          "late_second_half_mean": 0.008980794929315377,
+          "late_relative_drift": 0.016703224472257014,
+          "late_relative_slope_over_window": 0.03477322497293646,
+          "late_linear_slope_per_sample": -1.049452566230095e-05
+        },
+        "msd": {
+          "stationary": true,
+          "tolerance": 0.1,
+          "n_samples": 61,
+          "late_n_samples": 31,
+          "late_mean": 0.017670885906820064,
+          "late_first_half_mean": 0.01778965920444048,
+          "late_second_half_mean": 0.017559535940300915,
+          "late_relative_drift": 0.013022734986407825,
+          "late_relative_slope_over_window": 0.018132299415641734,
+          "late_linear_slope_per_sample": -1.068045980673684e-05
+        }
+      },
+      "all_numeric_checks_match": true,
+      "stationarity_matches": true
+    },
+    {
+      "model": "trimodal",
+      "raw_paths": {
+        "cage": "runs/breadth/trimodal/cage_raw.npz",
+        "cone_branches": "runs/breadth/trimodal/campaign_root/runs/gardner"
+      },
+      "checks": {
+        "equilibrium_u_DW": {
+          "stored": 0.09961236271123754,
+          "recomputed": 0.09961236271123754,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        "equilibrium_intrinsic_pairwise": {
+          "stored": 0.1264416009018477,
+          "recomputed": 0.1264416009018477,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        "cone_lambda": {
+          "stored": 0.5606179031900806,
+          "recomputed": 0.5606179031900806,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        "cone_D_sat": {
+          "stored": 48.69961126983512,
+          "recomputed": 48.69961126983512,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        "cone_empirical_c": {
+          "stored": 1.2694550647157505,
+          "recomputed": 1.2694550647157505,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        },
+        "cone_intrinsic_c": {
+          "stored": 1.2671830615786075,
+          "recomputed": 1.2671830615786075,
+          "absolute_difference": 0.0,
+          "tolerance": 1e-10,
+          "matches": true
+        }
+      },
+      "stationarity_recomputed": {
+        "u2": {
+          "stationary": true,
+          "tolerance": 0.1,
+          "n_samples": 61,
+          "late_n_samples": 31,
+          "late_mean": 0.009922622804915147,
+          "late_first_half_mean": 0.01000812498324131,
+          "late_second_half_mean": 0.009842464512734371,
+          "late_relative_drift": 0.016695230058012406,
+          "late_relative_slope_over_window": 0.02897645667257887,
+          "late_linear_slope_per_sample": -9.584081659498892e-06
+        },
+        "msd": {
+          "stationary": true,
+          "tolerance": 0.1,
+          "n_samples": 61,
+          "late_n_samples": 31,
+          "late_mean": 0.01995160159778792,
+          "late_first_half_mean": 0.020106046518912995,
+          "late_second_half_mean": 0.01980680948423316,
+          "late_relative_drift": 0.014998146049238138,
+          "late_relative_slope_over_window": 0.013492619523669458,
+          "late_linear_slope_per_sample": -8.973312308226267e-06
+        }
+      },
+      "all_numeric_checks_match": true,
+      "stationarity_matches": true
+    }
+  ],
+  "pooled": {
+    "c_T_parent_recomputations": [
+      {
+        "state_id": "flagship_T0.075",
+        "stored": 2.989014456396682,
+        "recomputed": 2.989014456396682,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "flagship_T0.090",
+        "stored": 2.979080266497045,
+        "recomputed": 2.979080266497045,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "flagship_T0.108",
+        "stored": 3.068431486907326,
+        "recomputed": 3.068431486907326,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "flagship_T0.130",
+        "stored": 3.112771916825688,
+        "recomputed": 3.112771916825688,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "flagship_T0.150",
+        "stored": 3.1926826146003093,
+        "recomputed": 3.1926826146003093,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "additive_delta0_T0.060",
+        "stored": 4.603670249496679,
+        "recomputed": 4.603670249496679,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "additive_delta0_T0.100",
+        "stored": 4.6282571404584285,
+        "recomputed": 4.6282571404584285,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "hard_r18_T0.030",
+        "stored": 3.4348890099751808,
+        "recomputed": 3.4348890099751808,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "hard_r18_T0.050",
+        "stored": 3.5226367966967493,
+        "recomputed": 3.5226367966967493,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "bimodal_T0.100",
+        "stored": 3.1778244903504773,
+        "recomputed": 3.1778244903504773,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "soft_r8_T0.040",
+        "stored": 2.222546283829676,
+        "recomputed": 2.222546283829676,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      },
+      {
+        "state_id": "trimodal_T0.080",
+        "stored": 3.1540004418557497,
+        "recomputed": 3.1540004418557497,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-10,
+        "matches": true
+      }
+    ],
+    "lambda_source_recomputations": [
+      {
+        "state_id": "flagship_T0.075",
+        "stored": 0.9661368965797221,
+        "recomputed": 0.9661368965797221,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "flagship_T0.090",
+        "stored": 1.0810198915735936,
+        "recomputed": 1.0810198915735936,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "flagship_T0.108",
+        "stored": 1.1801112380133876,
+        "recomputed": 1.1801112380133876,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "flagship_T0.130",
+        "stored": 1.3042516821366448,
+        "recomputed": 1.3042516821366448,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "flagship_T0.150",
+        "stored": 1.3469710939850674,
+        "recomputed": 1.3469710939850674,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "additive_delta0_T0.060",
+        "stored": 0.1830004466817033,
+        "recomputed": 0.1830004466817033,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "additive_delta0_T0.100",
+        "stored": 0.35674373049082436,
+        "recomputed": 0.35674373049082436,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "hard_r18_T0.030",
+        "stored": 0.3019390066346972,
+        "recomputed": 0.3019390066346972,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "hard_r18_T0.050",
+        "stored": 0.5568652561226494,
+        "recomputed": 0.5568652561226494,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "bimodal_T0.100",
+        "stored": 0.9322486436856282,
+        "recomputed": 0.9322486436856282,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "soft_r8_T0.040",
+        "stored": 0.4149538687420674,
+        "recomputed": 0.4149538687420674,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      },
+      {
+        "state_id": "trimodal_T0.080",
+        "stored": 0.5606179031900806,
+        "recomputed": 0.5606179031900806,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true
+      }
+    ],
+    "harmonic_formula_recomputations": [
+      {
+        "state_id": "flagship_T0.075",
+        "stored": -4.917507156529899,
+        "recomputed": -4.917507156529899,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "flagship_T0.090",
+        "stored": -4.3994638344456085,
+        "recomputed": -4.3994638344456085,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "flagship_T0.108",
+        "stored": -3.8588765671109844,
+        "recomputed": -3.8588765671109844,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "flagship_T0.130",
+        "stored": -3.3445600240296054,
+        "recomputed": -3.3445600240296054,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "flagship_T0.150",
+        "stored": -2.9248420052709485,
+        "recomputed": -2.9248420052709485,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "additive_delta0_T0.060",
+        "stored": -7.275418857664349,
+        "recomputed": -7.275418857664349,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "additive_delta0_T0.100",
+        "stored": -5.731161005873268,
+        "recomputed": -5.731161005873268,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "hard_r18_T0.030",
+        "stored": -8.195284438738472,
+        "recomputed": -8.195284438738472,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "hard_r18_T0.050",
+        "stored": -6.649125837062785,
+        "recomputed": -6.649125837062785,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "bimodal_T0.100",
+        "stored": -4.339580403950455,
+        "recomputed": -4.339580403950455,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "soft_r8_T0.040",
+        "stored": -6.168433161587738,
+        "recomputed": -6.168433161587738,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      },
+      {
+        "state_id": "trimodal_T0.080",
+        "stored": -4.99178204107302,
+        "recomputed": -4.99178204107302,
+        "absolute_difference": 0.0,
+        "tolerance": 1e-12,
+        "matches": true,
+        "scope": "recomputed from persisted sparse-LU log-pseudodeterminant diagnostic"
+      }
+    ],
+    "correlation_recomputations": {
+      "proxy_vs_c_T": {
+        "stored": -0.37329507908009973,
+        "recomputed": -0.3732950790800998,
+        "absolute_difference": 5.551115123125783e-17,
+        "tolerance": 1e-14,
+        "matches": true
+      },
+      "lambda_vs_proxy": {
+        "stored": 0.9170728668242243,
+        "recomputed": 0.9170728668242244,
+        "absolute_difference": 1.1102230246251565e-16,
+        "tolerance": 1e-14,
+        "matches": true
+      },
+      "lambda_vs_c_T": {
+        "stored": -0.46933619230597695,
+        "recomputed": -0.46933619230597684,
+        "absolute_difference": 1.1102230246251565e-16,
+        "tolerance": 1e-14,
+        "matches": true
+      }
+    },
+    "all_c_T_match": true,
+    "all_lambda_match": true,
+    "all_harmonic_formula_match": true,
+    "all_correlations_match": true,
+    "hessian_raw_limit": "Full Hessian matrices were intentionally not persisted; the entropy check independently re-evaluates the paper formula from the stored sparse-LU log-pseudodeterminant and the stored eight-mode stability tail. Parent paths and minimizer diagnostics are persisted."
+  },
+  "compute": {
+    "wall_seconds": 3.3148068339796737,
+    "user_cpu_seconds": 2.8867969999999996,
+    "system_cpu_seconds": 0.9658689999999999
+  },
+  "all_checks_pass": true
+}

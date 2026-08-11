@@ -1,0 +1,20 @@
+# Regenerated run artifacts and untracked input archives. data/manifest.json
+# records what belongs under data/ and why it is not shipped.
+runs/
+data/*
+!data/manifest.json
+*.npz
+*.pt
+
+# Caches, local environments and editor artefacts.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+.mplconfig/
+.DS_Store
+*.sw[op]
+*.log

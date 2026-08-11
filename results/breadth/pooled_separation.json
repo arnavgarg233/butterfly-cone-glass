@@ -1,0 +1,927 @@
+{
+  "schema_version": 1,
+  "kind": "pooled_cross_model_entropy_stiffness_separation",
+  "n_states": 12,
+  "n_models": 6,
+  "models": [
+    "additive_delta0",
+    "bimodal",
+    "flagship",
+    "hard_r18",
+    "soft_r8",
+    "trimodal"
+  ],
+  "rows": [
+    {
+      "state_id": "flagship_T0.075",
+      "model": "flagship",
+      "temperature": 0.075,
+      "exponent": 12,
+      "nonadditivity": 0.2,
+      "source_kind": "pt",
+      "parent": "runs/gardner/bridge-Tladder--c4-unpert/parent_state.pt",
+      "lambda": 0.9661368965797221,
+      "true_s_c": 1.6814570874650416,
+      "saved_c_T": 2.9890143876661868,
+      "lambda_source": "runs/vb_elastic_cone/vb_elastic_cone.json",
+      "equilibration_note": "flagship equilibrated temperature-ladder parent",
+      "N": 1500,
+      "volume": 1500.000068983103,
+      "density": 0.9999999540112668,
+      "G_inf_affine_xy_thermal_parent": 8.93420700967547,
+      "c_T": 2.989014456396682,
+      "c_T_saved_verification": {
+        "saved_c_T": 2.9890143876661868,
+        "recomputed_c_T": 2.989014456396682,
+        "absolute_difference": 6.873049507305495e-08,
+        "matches_to_1e-10": false
+      },
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -4.917507156529899,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 0.19871620978770888,
+        "fmax": 9.980205707484559e-09,
+        "converged": true,
+        "fire_steps": 1221,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -4.407027864547924e-15,
+          1.6051297468750173e-14,
+          1.8734423052592724e-14,
+          0.2700234600900154,
+          0.3616594868715545,
+          0.3802550776306362,
+          0.4061114126727159,
+          0.4959111475060695
+        ],
+        "translation_eigenvalues": [
+          -4.407027864547924e-15,
+          1.6051297468750173e-14,
+          1.8734423052592724e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 0.2700234600900154,
+        "n_minor_coordinates": 4497,
+        "log_abs_determinant_translation_fixed_minor": 16957.585257694314,
+        "translation_normalization_log_N_cubed": 21.939661161270905,
+        "log_pseudodeterminant": 16979.524918855586,
+        "minimum_abs_U_diagonal": 4.861479789375545
+      },
+      "compute": {
+        "wall_seconds": 5.967649916070513,
+        "user_cpu_seconds": 5.627964,
+        "system_cpu_seconds": 4.310783
+      }
+    },
+    {
+      "state_id": "flagship_T0.090",
+      "model": "flagship",
+      "temperature": 0.09,
+      "exponent": 12,
+      "nonadditivity": 0.2,
+      "source_kind": "pt",
+      "parent": "runs/gardner/bridge-Tladder--c3-unpert/parent_state.pt",
+      "lambda": 1.0810198915735936,
+      "true_s_c": 1.9494038631389952,
+      "saved_c_T": 2.979080197994981,
+      "lambda_source": "runs/vb_elastic_cone/vb_elastic_cone.json",
+      "equilibration_note": "flagship equilibrated temperature-ladder parent",
+      "N": 1500,
+      "volume": 1500.000068983103,
+      "density": 0.9999999540112668,
+      "G_inf_affine_xy_thermal_parent": 8.874918826085814,
+      "c_T": 2.979080266497045,
+      "c_T_saved_verification": {
+        "saved_c_T": 2.979080197994981,
+        "recomputed_c_T": 2.979080266497045,
+        "absolute_difference": 6.850206402120307e-08,
+        "matches_to_1e-10": false
+      },
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -4.3994638344456085,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 0.2068603080909586,
+        "fmax": 9.979586558032624e-09,
+        "converged": true,
+        "fire_steps": 2157,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -1.313018011148305e-14,
+          5.308265051195398e-15,
+          2.052340736182421e-14,
+          0.19679020554970852,
+          0.2625477678136321,
+          0.39814842962929137,
+          0.45381158553480117,
+          0.5016930563315406
+        ],
+        "translation_eigenvalues": [
+          5.308265051195398e-15,
+          -1.313018011148305e-14,
+          2.052340736182421e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 0.19679020554970852,
+        "n_minor_coordinates": 4497,
+        "log_abs_determinant_translation_fixed_minor": 17043.25537324627,
+        "translation_normalization_log_N_cubed": 21.939661161270905,
+        "log_pseudodeterminant": 17065.19503440754,
+        "minimum_abs_U_diagonal": 4.462305476193907
+      },
+      "compute": {
+        "wall_seconds": 8.559230083948933,
+        "user_cpu_seconds": 8.823391,
+        "system_cpu_seconds": 6.890445999999999
+      }
+    },
+    {
+      "state_id": "flagship_T0.108",
+      "model": "flagship",
+      "temperature": 0.108,
+      "exponent": 12,
+      "nonadditivity": 0.2,
+      "source_kind": "pt",
+      "parent": "runs/gardner/bridge-Tladder--c2-unpert/parent_state.pt",
+      "lambda": 1.1801112380133876,
+      "true_s_c": 2.2339855913719724,
+      "saved_c_T": 3.0684314163506863,
+      "lambda_source": "runs/vb_elastic_cone/vb_elastic_cone.json",
+      "equilibration_note": "flagship equilibrated temperature-ladder parent",
+      "N": 1500,
+      "volume": 1500.000068983103,
+      "density": 0.9999999540112668,
+      "G_inf_affine_xy_thermal_parent": 9.41527135684788,
+      "c_T": 3.068431486907326,
+      "c_T_saved_verification": {
+        "saved_c_T": 3.0684314163506863,
+        "recomputed_c_T": 3.068431486907326,
+        "absolute_difference": 7.055663964194991e-08,
+        "matches_to_1e-10": false
+      },
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -3.8588765671109844,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 0.21534316445148974,
+        "fmax": 9.9011998325564e-09,
+        "converged": true,
+        "fire_steps": 1975,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -2.8060493696458707e-14,
+          1.2870360093034908e-14,
+          3.2126386574492396e-14,
+          0.22094333157637006,
+          0.27517536119693736,
+          0.33316659251207387,
+          0.4362987888592378,
+          0.46888351185008265
+        ],
+        "translation_eigenvalues": [
+          1.2870360093034908e-14,
+          -2.8060493696458707e-14,
+          3.2126386574492396e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 0.22094333157637006,
+        "n_minor_coordinates": 4497,
+        "log_abs_determinant_translation_fixed_minor": 17061.293653047225,
+        "translation_normalization_log_N_cubed": 21.939661161270905,
+        "log_pseudodeterminant": 17083.233314208497,
+        "minimum_abs_U_diagonal": 3.9438629599143518
+      },
+      "compute": {
+        "wall_seconds": 8.020991915953346,
+        "user_cpu_seconds": 8.447216999999998,
+        "system_cpu_seconds": 6.880067
+      }
+    },
+    {
+      "state_id": "flagship_T0.130",
+      "model": "flagship",
+      "temperature": 0.13,
+      "exponent": 12,
+      "nonadditivity": 0.2,
+      "source_kind": "pt",
+      "parent": "runs/gardner/bridge-Tladder--c1-unpert/parent_state.pt",
+      "lambda": 1.3042516821366448,
+      "true_s_c": 2.488983154113351,
+      "saved_c_T": 3.112771845249469,
+      "lambda_source": "runs/vb_elastic_cone/vb_elastic_cone.json",
+      "equilibration_note": "flagship equilibrated temperature-ladder parent",
+      "N": 1500,
+      "volume": 1500.000068983103,
+      "density": 0.9999999540112668,
+      "G_inf_affine_xy_thermal_parent": 9.689348560577784,
+      "c_T": 3.112771916825688,
+      "c_T_saved_verification": {
+        "saved_c_T": 3.112771845249469,
+        "recomputed_c_T": 3.112771916825688,
+        "absolute_difference": 7.157621917386336e-08,
+        "matches_to_1e-10": false
+      },
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -3.3445600240296054,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 0.22812764027684165,
+        "fmax": 9.430046676721371e-09,
+        "converged": true,
+        "fire_steps": 2447,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -6.8271079328849284e-15,
+          5.4213031416452e-15,
+          8.386772761375963e-15,
+          0.16274367901137393,
+          0.1901083219149104,
+          0.24115287955239265,
+          0.2708481345676671,
+          0.33161385967385826
+        ],
+        "translation_eigenvalues": [
+          5.4213031416452e-15,
+          -6.8271079328849284e-15,
+          8.386772761375963e-15
+        ],
+        "minimum_sampled_physical_eigenvalue": 0.16274367901137393,
+        "n_minor_coordinates": 4497,
+        "log_abs_determinant_translation_fixed_minor": 17185.860614445366,
+        "translation_normalization_log_N_cubed": 21.939661161270905,
+        "log_pseudodeterminant": 17207.800275606638,
+        "minimum_abs_U_diagonal": 5.824314425866051
+      },
+      "compute": {
+        "wall_seconds": 11.83393104095012,
+        "user_cpu_seconds": 11.423343000000003,
+        "system_cpu_seconds": 9.197433
+      }
+    },
+    {
+      "state_id": "flagship_T0.150",
+      "model": "flagship",
+      "temperature": 0.15,
+      "exponent": 12,
+      "nonadditivity": 0.2,
+      "source_kind": "pt",
+      "parent": "runs/gardner/bridge-Tladder--c0-unpert/parent_state.pt",
+      "lambda": 1.3469710939850674,
+      "true_s_c": 2.733759528663791,
+      "saved_c_T": 3.1926825411865942,
+      "lambda_source": "runs/vb_elastic_cone/vb_elastic_cone.json",
+      "equilibration_note": "flagship equilibrated temperature-ladder parent",
+      "N": 1500,
+      "volume": 1500.000068983103,
+      "density": 0.9999999540112668,
+      "G_inf_affine_xy_thermal_parent": 10.193221808797688,
+      "c_T": 3.1926826146003093,
+      "c_T_saved_verification": {
+        "saved_c_T": 3.1926825411865942,
+        "recomputed_c_T": 3.1926826146003093,
+        "absolute_difference": 7.34137151070513e-08,
+        "matches_to_1e-10": false
+      },
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -2.9248420052709485,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 0.2288737890831105,
+        "fmax": 9.7265909626644e-09,
+        "converged": true,
+        "fire_steps": 4833,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -3.8884935064802844e-15,
+          5.323654932804662e-15,
+          2.7020699975476455e-14,
+          0.10166280323849974,
+          0.1885617247226792,
+          0.2636713558391167,
+          0.36642866475119207,
+          0.41762295898198865
+        ],
+        "translation_eigenvalues": [
+          -3.8884935064802844e-15,
+          5.323654932804662e-15,
+          2.7020699975476455e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 0.10166280323849974,
+        "n_minor_coordinates": 4497,
+        "log_abs_determinant_translation_fixed_minor": 17213.75554587361,
+        "translation_normalization_log_N_cubed": 21.939661161270905,
+        "log_pseudodeterminant": 17235.69520703488,
+        "minimum_abs_U_diagonal": 4.569649760647581
+      },
+      "compute": {
+        "wall_seconds": 25.746384875033982,
+        "user_cpu_seconds": 22.362561,
+        "system_cpu_seconds": 18.170434000000004
+      }
+    },
+    {
+      "state_id": "additive_delta0_T0.060",
+      "model": "additive_delta0",
+      "temperature": 0.06,
+      "exponent": 12,
+      "nonadditivity": 0.0,
+      "source_kind": "npz",
+      "parent": "runs/second_model/scan_T0060.npz",
+      "lambda": 0.1830004466817033,
+      "true_s_c": null,
+      "saved_c_T": null,
+      "lambda_source": "runs/second_model/cone_sm-n12add-T0060-h4000.json",
+      "equilibration_metadata_converged": false,
+      "equilibration_note": "inherited swap parent used by the completed cone; legacy scan's strict composite flag is false and is retained as a pooled-data caveat",
+      "N": 1000,
+      "volume": 999.9999999999995,
+      "density": 1.0000000000000004,
+      "G_inf_affine_xy_thermal_parent": 21.19377976610082,
+      "c_T": 4.603670249496679,
+      "c_T_saved_verification": null,
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -7.275418857664349,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 1.182925667352055,
+        "fmax": 9.090463372134318e-09,
+        "converged": true,
+        "fire_steps": 519,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -9.813382405400091e-14,
+          -5.631637296258266e-14,
+          3.179588095959014e-14,
+          3.755467668566628,
+          3.978146186492601,
+          4.469137150477678,
+          4.6327078320718815,
+          4.650600302648351
+        ],
+        "translation_eigenvalues": [
+          3.179588095959014e-14,
+          -5.631637296258266e-14,
+          -9.813382405400091e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 3.755467668566628,
+        "n_minor_coordinates": 2997,
+        "log_abs_determinant_translation_fixed_minor": 14676.765749289709,
+        "translation_normalization_log_N_cubed": 20.72326583694641,
+        "log_pseudodeterminant": 14697.489015126655,
+        "minimum_abs_U_diagonal": 22.019860932489287
+      },
+      "compute": {
+        "wall_seconds": 1.980968666030094,
+        "user_cpu_seconds": 1.6893010000000004,
+        "system_cpu_seconds": 1.1296619999999962
+      }
+    },
+    {
+      "state_id": "additive_delta0_T0.100",
+      "model": "additive_delta0",
+      "temperature": 0.1,
+      "exponent": 12,
+      "nonadditivity": 0.0,
+      "source_kind": "npz",
+      "parent": "runs/second_model/scan_T0100.npz",
+      "lambda": 0.35674373049082436,
+      "true_s_c": null,
+      "saved_c_T": null,
+      "lambda_source": "runs/second_model/cone_sm-n12add-T0100.json",
+      "equilibration_metadata_converged": false,
+      "equilibration_note": "inherited swap parent used by the completed cone; legacy scan's strict composite flag is false and is retained as a pooled-data caveat",
+      "N": 1000,
+      "volume": 999.9999999999995,
+      "density": 1.0000000000000004,
+      "G_inf_affine_xy_thermal_parent": 21.42076415820444,
+      "c_T": 4.6282571404584285,
+      "c_T_saved_verification": null,
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -5.731161005873268,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 1.1898986468482768,
+        "fmax": 8.817714095064248e-09,
+        "converged": true,
+        "fire_steps": 448,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -7.328800291437166e-14,
+          -1.4838176542407745e-14,
+          8.017196432287378e-14,
+          3.8288204905336767,
+          3.9543641508891785,
+          4.053832416711543,
+          4.25941204316159,
+          4.348335115710113
+        ],
+        "translation_eigenvalues": [
+          -1.4838176542407745e-14,
+          -7.328800291437166e-14,
+          8.017196432287378e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 3.8288204905336767,
+        "n_minor_coordinates": 2997,
+        "log_abs_determinant_translation_fixed_minor": 14650.138834560898,
+        "translation_normalization_log_N_cubed": 20.72326583694641,
+        "log_pseudodeterminant": 14670.862100397844,
+        "minimum_abs_U_diagonal": 14.381760842932167
+      },
+      "compute": {
+        "wall_seconds": 1.7636690840590745,
+        "user_cpu_seconds": 1.5183650000000029,
+        "system_cpu_seconds": 0.977212999999999
+      }
+    },
+    {
+      "state_id": "hard_r18_T0.030",
+      "model": "hard_r18",
+      "temperature": 0.03,
+      "exponent": 18,
+      "nonadditivity": 0.2,
+      "source_kind": "npz",
+      "parent": "runs/second_model/scan_n18_T0030.npz",
+      "lambda": 0.3019390066346972,
+      "true_s_c": null,
+      "saved_c_T": null,
+      "lambda_source": "runs/second_model/cone_sm-n18-T0030-h4000.json",
+      "equilibration_metadata_converged": false,
+      "equilibration_note": "inherited swap parent used by the completed cone; legacy scan's strict composite flag is false and is retained as a pooled-data caveat",
+      "N": 1000,
+      "volume": 999.9999999999995,
+      "density": 1.0000000000000004,
+      "G_inf_affine_xy_thermal_parent": 11.798462510848282,
+      "c_T": 3.4348890099751808,
+      "c_T_saved_verification": null,
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -8.195284438738472,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 0.23056250386191807,
+        "fmax": 9.600105699735662e-09,
+        "converged": true,
+        "fire_steps": 792,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -1.2795779990909676e-14,
+          5.973888593555093e-16,
+          5.739990142224496e-14,
+          0.773225471310821,
+          0.9917991368901247,
+          1.104612272921497,
+          1.485215471880865,
+          1.6033932376146698
+        ],
+        "translation_eigenvalues": [
+          5.973888593555093e-16,
+          -1.2795779990909676e-14,
+          5.739990142224496e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 0.773225471310821,
+        "n_minor_coordinates": 2997,
+        "log_abs_determinant_translation_fixed_minor": 12361.772711161644,
+        "translation_normalization_log_N_cubed": 20.72326583694641,
+        "log_pseudodeterminant": 12382.49597699859,
+        "minimum_abs_U_diagonal": 4.500702022819405
+      },
+      "compute": {
+        "wall_seconds": 2.869213750003837,
+        "user_cpu_seconds": 2.418142000000003,
+        "system_cpu_seconds": 1.5989339999999999
+      }
+    },
+    {
+      "state_id": "hard_r18_T0.050",
+      "model": "hard_r18",
+      "temperature": 0.05,
+      "exponent": 18,
+      "nonadditivity": 0.2,
+      "source_kind": "npz",
+      "parent": "runs/second_model/scan_n18_T0050.npz",
+      "lambda": 0.5568652561226494,
+      "true_s_c": null,
+      "saved_c_T": null,
+      "lambda_source": "runs/second_model/cone_sm-n18-T0050.json",
+      "equilibration_metadata_converged": false,
+      "equilibration_note": "inherited swap parent used by the completed cone; legacy scan's strict composite flag is false and is retained as a pooled-data caveat",
+      "N": 1000,
+      "volume": 999.9999999999995,
+      "density": 1.0000000000000004,
+      "G_inf_affine_xy_thermal_parent": 12.408970001441942,
+      "c_T": 3.5226367966967493,
+      "c_T_saved_verification": null,
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -6.649125837062785,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 0.23719819353139607,
+        "fmax": 9.926433725949362e-09,
+        "converged": true,
+        "fire_steps": 576,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -2.4524029543700678e-15,
+          1.0405695814982258e-14,
+          4.630010681921469e-14,
+          1.100497568366858,
+          1.1663490615801895,
+          1.2479161871947253,
+          1.3139180361945262,
+          1.4017221268201934
+        ],
+        "translation_eigenvalues": [
+          -2.4524029543700678e-15,
+          1.0405695814982258e-14,
+          4.630010681921469e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 1.100497568366858,
+        "n_minor_coordinates": 2997,
+        "log_abs_determinant_translation_fixed_minor": 12331.344296663618,
+        "translation_normalization_log_N_cubed": 20.72326583694641,
+        "log_pseudodeterminant": 12352.067562500564,
+        "minimum_abs_U_diagonal": 5.094606313716236
+      },
+      "compute": {
+        "wall_seconds": 2.1970464169280604,
+        "user_cpu_seconds": 1.8548979999999986,
+        "system_cpu_seconds": 1.222009
+      }
+    },
+    {
+      "state_id": "bimodal_T0.100",
+      "model": "bimodal",
+      "temperature": 0.1,
+      "exponent": 12,
+      "nonadditivity": 0.2,
+      "source_kind": "pt",
+      "parent": "runs/bimodal/campaign_staged_root/runs/gardner/bimodal-cone-staged--c0-unpert/parent_state.pt",
+      "lambda": 0.9322486436856282,
+      "true_s_c": null,
+      "saved_c_T": null,
+      "lambda_source": "runs/bimodal/bimodal_result.json",
+      "equilibration_note": "stationary long-NVE bimodal cage certificate",
+      "N": 1500,
+      "volume": 1499.999999999999,
+      "density": 1.0000000000000007,
+      "G_inf_affine_xy_thermal_parent": 10.098568491471278,
+      "c_T": 3.1778244903504773,
+      "c_T_saved_verification": null,
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -4.339580403950455,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 0.26862135451199404,
+        "fmax": 9.756775249238492e-09,
+        "converged": true,
+        "fire_steps": 1780,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -1.6211323485248644e-14,
+          1.1681447491691463e-14,
+          1.8987158369263272e-14,
+          0.1395248604569105,
+          0.15463156775191683,
+          0.41465120756123514,
+          0.4671997020384839,
+          0.5599581193837688
+        ],
+        "translation_eigenvalues": [
+          1.1681447491691463e-14,
+          -1.6211323485248644e-14,
+          1.8987158369263272e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 0.1395248604569105,
+        "n_minor_coordinates": 4497,
+        "log_abs_determinant_translation_fixed_minor": 17811.217559587298,
+        "translation_normalization_log_N_cubed": 21.939661161270905,
+        "log_pseudodeterminant": 17833.15722074857,
+        "minimum_abs_U_diagonal": 4.743786655081694
+      },
+      "compute": {
+        "wall_seconds": 7.752425082959235,
+        "user_cpu_seconds": 6.51628199999999,
+        "system_cpu_seconds": 4.4556109999999975
+      }
+    },
+    {
+      "state_id": "soft_r8_T0.040",
+      "model": "soft_r8",
+      "temperature": 0.04,
+      "exponent": 8,
+      "nonadditivity": 0.2,
+      "source_kind": "npz",
+      "parent": "runs/breadth/soft_r8/parent_T0.040.npz",
+      "lambda": 0.4149538687420674,
+      "true_s_c": null,
+      "saved_c_T": null,
+      "lambda_source": "runs/breadth/soft_r8/cone_analysis.json",
+      "equilibration_note": "stationary full N=384 NVE cage certificate",
+      "N": 384,
+      "volume": 383.9999999999999,
+      "density": 1.0000000000000002,
+      "G_inf_affine_xy_thermal_parent": 4.939711983765104,
+      "c_T": 2.222546283829676,
+      "c_T_saved_verification": null,
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -6.168433161587738,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 0.13502832027776743,
+        "fmax": 9.644297663965962e-09,
+        "converged": true,
+        "fire_steps": 956,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          -1.1707885196481588e-14,
+          -8.552059831492937e-15,
+          -1.6111775440359713e-15,
+          0.4557836909243653,
+          0.5433066012534815,
+          0.7136945169854018,
+          0.8461939988733774,
+          0.9235974839950502
+        ],
+        "translation_eigenvalues": [
+          -1.6111775440359713e-15,
+          -8.552059831492937e-15,
+          -1.1707885196481588e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 0.4557836909243653,
+        "n_minor_coordinates": 1149,
+        "log_abs_determinant_translation_fixed_minor": 3843.9695935031705,
+        "translation_normalization_log_N_cubed": 17.85192765776318,
+        "log_pseudodeterminant": 3861.8215211609336,
+        "minimum_abs_U_diagonal": 4.98979325884592
+      },
+      "compute": {
+        "wall_seconds": 1.416331958025694,
+        "user_cpu_seconds": 1.0508989999999998,
+        "system_cpu_seconds": 0.9147509999999999
+      }
+    },
+    {
+      "state_id": "trimodal_T0.080",
+      "model": "trimodal",
+      "temperature": 0.08,
+      "exponent": 12,
+      "nonadditivity": 0.2,
+      "source_kind": "npz",
+      "parent": "runs/breadth/trimodal/parent_T0.080.npz",
+      "lambda": 0.5606179031900806,
+      "true_s_c": null,
+      "saved_c_T": null,
+      "lambda_source": "runs/breadth/trimodal/cone_analysis.json",
+      "equilibration_note": "stationary full N=384 NVE cage certificate",
+      "N": 384,
+      "volume": 383.9999999999999,
+      "density": 1.0000000000000002,
+      "G_inf_affine_xy_thermal_parent": 9.947718787226265,
+      "c_T": 3.1540004418557497,
+      "c_T_saved_verification": null,
+      "harmonic_proxy": {
+        "name": "classical_harmonic_basin_entropy_per_particle",
+        "symbol": "s_harm_proxy",
+        "value": -4.99178204107302,
+        "planck_constant": 1.0,
+        "mass": 1.0,
+        "expected_translation_modes": 3,
+        "convention": "N^-1 sum_[3N-3] [1+ln(T/(hbar*sqrt(eigenvalue/mass)))]; h=1, mass=1",
+        "is_not_configurational_entropy": true
+      },
+      "inherent_structure": {
+        "e_is_per_particle": 0.25873887644135984,
+        "fmax": 9.584047336373547e-09,
+        "converged": true,
+        "fire_steps": 708,
+        "lbfgs_outer_steps": 0,
+        "smallest_eigenvalues": [
+          5.904403293007009e-15,
+          1.7404470522580276e-14,
+          3.226802675244051e-14,
+          0.8523143775412951,
+          0.9205722915817418,
+          1.4076329032244943,
+          1.6251157476605995,
+          1.8574778191898464
+        ],
+        "translation_eigenvalues": [
+          5.904403293007009e-15,
+          1.7404470522580276e-14,
+          3.226802675244051e-14
+        ],
+        "minimum_sampled_physical_eigenvalue": 0.8523143775412951,
+        "n_minor_coordinates": 1149,
+        "log_abs_determinant_translation_fixed_minor": 4533.153753874621,
+        "translation_normalization_log_N_cubed": 17.85192765776318,
+        "log_pseudodeterminant": 4551.005681532384,
+        "minimum_abs_U_diagonal": 8.84107285921284
+      },
+      "compute": {
+        "wall_seconds": 1.152590333018452,
+        "user_cpu_seconds": 0.7668180000000007,
+        "system_cpu_seconds": 0.6276300000000035
+      }
+    }
+  ],
+  "entropy_scale": {
+    "flagship_true_s_c_available": true,
+    "true_s_c_available_for_nonflagship": false,
+    "pooled_quantity": "classical harmonic-basin entropy per particle",
+    "common_convention": "h=1, mass=1, epsilon=1, mean diameter=1, density=1",
+    "warning": "The pooled harmonic quantity is a vibrational basin entropy, not s_c. Without model-specific thermodynamic-integration ladders, a true pooled s_c test is unavailable."
+  },
+  "flagship_true_s_c_vs_c_T": {
+    "n": 5,
+    "pearson_r": 0.9582850073018381,
+    "spearman_r": 0.8999999999999998,
+    "slope": 0.2039528890150123,
+    "intercept": 2.616126977325385,
+    "R2": 0.9183101552194839,
+    "RMSE": 0.02275596215769503
+  },
+  "pooled_state_weighted": {
+    "harmonic_proxy_vs_c_T": {
+      "n": 12,
+      "pearson_r": -0.37329507908009973,
+      "spearman_r": -0.3846153846153847,
+      "slope": -0.15647442506714698,
+      "intercept": 2.521652635717485,
+      "R2": 0.13934921606541792,
+      "RMSE": 0.5993725161781083
+    },
+    "lambda_vs_harmonic_proxy": {
+      "n": 12,
+      "pearson_r": 0.9170728668242243,
+      "spearman_r": 0.9440559440559443,
+      "slope": 0.23660101800163522,
+      "intercept": 2.0035387953475237,
+      "R2": 0.8410226430652014,
+      "RMSE": 0.1585523347833333
+    },
+    "lambda_vs_c_T": {
+      "n": 12,
+      "pearson_r": -0.46933619230597695,
+      "spearman_r": -0.4895104895104896,
+      "slope": -0.28887217451922953,
+      "intercept": 1.7303777799995337,
+      "R2": 0.22027646140827298,
+      "RMSE": 0.3511359761441067
+    }
+  },
+  "model_mean_sensitivity": {
+    "rows": [
+      {
+        "model": "additive_delta0",
+        "n_states": 2,
+        "lambda": 0.2698720885862638,
+        "c_T": 4.6159636949775535,
+        "s_harm_proxy": -6.503289931768808
+      },
+      {
+        "model": "bimodal",
+        "n_states": 1,
+        "lambda": 0.9322486436856282,
+        "c_T": 3.1778244903504773,
+        "s_harm_proxy": -4.339580403950455
+      },
+      {
+        "model": "flagship",
+        "n_states": 5,
+        "lambda": 1.175698160457683,
+        "c_T": 3.06839614824541,
+        "s_harm_proxy": -3.889049917477409
+      },
+      {
+        "model": "hard_r18",
+        "n_states": 2,
+        "lambda": 0.4294021313786733,
+        "c_T": 3.478762903335965,
+        "s_harm_proxy": -7.422205137900629
+      },
+      {
+        "model": "soft_r8",
+        "n_states": 1,
+        "lambda": 0.4149538687420674,
+        "c_T": 2.222546283829676,
+        "s_harm_proxy": -6.168433161587738
+      },
+      {
+        "model": "trimodal",
+        "n_states": 1,
+        "lambda": 0.5606179031900806,
+        "c_T": 3.1540004418557497,
+        "s_harm_proxy": -4.99178204107302
+      }
+    ],
+    "harmonic_proxy_vs_c_T": {
+      "n": 6,
+      "pearson_r": -0.28986395700175493,
+      "spearman_r": -0.5428571428571429,
+      "slope": -0.16471663310741982,
+      "intercept": 2.371677990966194,
+      "R2": 0.08402111356871524,
+      "RMSE": 0.6782557063553833
+    },
+    "lambda_vs_harmonic_proxy": {
+      "n": 6,
+      "pearson_r": 0.8739503804587951,
+      "spearman_r": 0.8285714285714287,
+      "slope": 0.2234677050588364,
+      "intercept": 1.871245339012657,
+      "R2": 0.7637892675040727,
+      "RMSE": 0.1549834381870142
+    },
+    "lambda_vs_c_T": {
+      "n": 6,
+      "pearson_r": -0.31802327382268647,
+      "spearman_r": -0.3714285714285715,
+      "slope": -0.14310132575468382,
+      "intercept": 1.1007320537746152,
+      "R2": 0.10113880269289942,
+      "RMSE": 0.3023303831181563
+    }
+  },
+  "verdict": {
+    "flagship_collinearity_reproduced": true,
+    "proxy_cT_collinearity_below_0_9": true,
+    "lambda_higher_R2_for": "harmonic_proxy",
+    "true_cross_model_s_c_c_T_collinearity_broken": null,
+    "clean_entropy_vs_stiffness_separation": false,
+    "reason": "No common true configurational-entropy scale exists for the nonflagship models; the proxy analysis cannot by itself identify entropy control."
+  }
+}

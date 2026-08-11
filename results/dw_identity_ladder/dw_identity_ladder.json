@@ -1,0 +1,171 @@
+{
+  "correlation": {
+    "direction": "decreasing",
+    "fit_r2": 0.9646206834977014,
+    "intercept": 1.6145115628548314,
+    "monotone": true,
+    "n": 5,
+    "name": "c",
+    "pearson_r": -0.9821510492270021,
+    "slope": -0.23613283304494748,
+    "spearman_p": 0.008333333333333333,
+    "spearman_p_asymptotic": 1.4042654220543602e-24,
+    "spearman_rho": -0.9999999999999999,
+    "x": [
+      2.733759528663791,
+      2.488983154113351,
+      2.2339855913719724,
+      1.9494038631389952,
+      1.6814570874650416
+    ],
+    "y": [
+      0.9891683383408957,
+      0.9963265708481577,
+      1.0883678746488903,
+      1.1638620143334257,
+      1.216689160823194
+    ]
+  },
+  "kind": "dw_identity_ladder",
+  "meta": {
+    "bridge_analysis_path": "runs/bridge_analysis/bridge_analysis.json",
+    "ddof": 1,
+    "ladder_dir": "runs/gardner/bridge-Tladder",
+    "n_rungs": 5,
+    "plateau_frac": 0.5,
+    "plateau_window": "final plateau_frac of the per-frame branch-variance curve",
+    "u_dw_estimator": "dw_identity.measure_u_dw_for_run"
+  },
+  "outputs": {
+    "figure": "runs/dw_identity_ladder/dw_identity_ladder.png",
+    "json": "runs/dw_identity_ladder/dw_identity_ladder.json",
+    "markdown": "runs/dw_identity_ladder/dw_identity_ladder.md"
+  },
+  "per_temperature": [
+    {
+      "N": 1500,
+      "c": 0.9891683383408957,
+      "config": 0,
+      "config_dir": "runs/gardner/bridge-Tladder--c0-unpert",
+      "d_sat_over_n": 0.3387572183288557,
+      "d_sat_over_n_sem": 0.0017924276463460978,
+      "ddof": 1,
+      "msd_rel_parent_plateau": 0.15407519028114725,
+      "n_branches": 32,
+      "n_frames": 81,
+      "plateau_frac": 0.5,
+      "s_c": 2.733759528663791,
+      "temperature": 0.15,
+      "u2_cage_plateau": 0.11728344182256387,
+      "u_DW": 0.3424667017719589,
+      "u_DW_from_msd": 0.2775564719846641
+    },
+    {
+      "N": 1500,
+      "c": 0.9963265708481577,
+      "config": 1,
+      "config_dir": "runs/gardner/bridge-Tladder--c1-unpert",
+      "d_sat_over_n": 0.30212348039349163,
+      "d_sat_over_n_sem": 0.0009469311831080304,
+      "ddof": 1,
+      "msd_rel_parent_plateau": 0.12568541972245834,
+      "n_branches": 32,
+      "n_frames": 81,
+      "plateau_frac": 0.5,
+      "s_c": 2.488983154113351,
+      "temperature": 0.13,
+      "u2_cage_plateau": 0.09195292167096222,
+      "u_DW": 0.3032374015041057,
+      "u_DW_from_msd": 0.2506844826893543
+    },
+    {
+      "N": 1500,
+      "c": 1.0883678746488903,
+      "config": 2,
+      "config_dir": "runs/gardner/bridge-Tladder--c2-unpert",
+      "d_sat_over_n": 0.22444661267298574,
+      "d_sat_over_n_sem": 0.0006386030608644825,
+      "ddof": 1,
+      "msd_rel_parent_plateau": 0.06968687163157138,
+      "n_branches": 32,
+      "n_frames": 81,
+      "plateau_frac": 0.5,
+      "s_c": 2.2339855913719724,
+      "temperature": 0.108,
+      "u2_cage_plateau": 0.04252797289388103,
+      "u_DW": 0.2062231143540438,
+      "u_DW_from_msd": 0.18666396496320786
+    },
+    {
+      "N": 1500,
+      "c": 1.1638620143334257,
+      "config": 3,
+      "config_dir": "runs/gardner/bridge-Tladder--c3-unpert",
+      "d_sat_over_n": 0.1922310043094664,
+      "d_sat_over_n_sem": 0.0005852443363249419,
+      "ddof": 1,
+      "msd_rel_parent_plateau": 0.04520218556025186,
+      "n_branches": 32,
+      "n_frames": 81,
+      "plateau_frac": 0.5,
+      "s_c": 1.9494038631389952,
+      "temperature": 0.09,
+      "u2_cage_plateau": 0.027279969577204917,
+      "u_DW": 0.16516649047916745,
+      "u_DW_from_msd": 0.15033659827242976
+    },
+    {
+      "N": 1500,
+      "c": 1.216689160823194,
+      "config": 4,
+      "config_dir": "runs/gardner/bridge-Tladder--c4-unpert",
+      "d_sat_over_n": 0.1641963052797545,
+      "d_sat_over_n_sem": 0.00012866786371822867,
+      "ddof": 1,
+      "msd_rel_parent_plateau": 0.031433862788268645,
+      "n_branches": 32,
+      "n_frames": 81,
+      "plateau_frac": 0.5,
+      "s_c": 1.6814570874650416,
+      "temperature": 0.075,
+      "u2_cage_plateau": 0.018212412691993973,
+      "u_DW": 0.1349533722883351,
+      "u_DW_from_msd": 0.1253671862734995
+    }
+  ],
+  "schema_version": 1,
+  "target_c": 1.3029400317411202,
+  "trend": {
+    "approaches_target_on_cooling": true,
+    "deepest_distance_to_target": 0.08625087091792616,
+    "deepest_temperature": 0.075,
+    "deepest_value": 1.216689160823194,
+    "direction_on_cooling": "increasing",
+    "direction_vs_temperature": "decreasing",
+    "monotone": true,
+    "n": 5,
+    "target": 1.3029400317411202,
+    "temperatures_cold_to_hot": [
+      0.075,
+      0.09,
+      0.108,
+      0.13,
+      0.15
+    ],
+    "values_cold_to_hot": [
+      1.216689160823194,
+      1.1638620143334257,
+      1.0883678746488903,
+      0.9963265708481577,
+      0.9891683383408957
+    ],
+    "warmest_temperature": 0.15,
+    "warmest_value": 0.9891683383408957
+  },
+  "verdict": {
+    "adds_third_bridge_leg": true,
+    "deep_T_limit_consistent_with_target": true,
+    "forecloses_one_temperature_objection": true,
+    "statement": "c(T) rises monotonically on cooling and approaches the deep-T Gaussian target 1.303; the five-rung ladder turns the one-temperature identity into a temperature-dependent trend and supplies a sign-flipped entropy bridge leg."
+  }
+}

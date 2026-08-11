@@ -1,0 +1,81 @@
+{
+  "kind": "butterfly_cone_campaign_settings",
+  "schema_version": "1.0.0",
+  "statement": "The production settings behind each shipped artifact. These are the arguments the driver was run with; the drivers need the equilibrated parent archives described in data/manifest.json, which this repository does not ship.",
+  "campaigns": [
+    {
+      "name": "flagship_twin_cone",
+      "driver": "scripts/gardner_cone_campaign.py",
+      "arguments": ["--temperature", "0.075", "--n-sites", "6", "--branches", "48", "--horizon", "2000"],
+      "device": "gpu",
+      "produces": "the flagship lambda, front speed v_b and cone ceiling D_sat",
+      "self_test": ["--smoke", "--out", "runs/cone_smoke"]
+    },
+    {
+      "name": "debye_waller_identity_ladder",
+      "driver": "scripts/dw_identity_ladder.py",
+      "arguments": [],
+      "device": "cpu",
+      "produces": "results/dw_identity_ladder/dw_identity_ladder.json"
+    },
+    {
+      "name": "configurational_entropy_ladder",
+      "driver": "scripts/sc_energy_ladder.py",
+      "arguments": ["--config", "data/configs_N1500.npz"],
+      "device": "cpu",
+      "produces": "results/sc_energy_ladder/report.json and results/sc_energy_ladder/sc_curve.json"
+    },
+    {
+      "name": "breadth_six_glass_formers",
+      "driver": "scripts/breadth_report.py",
+      "arguments": [],
+      "device": "gpu",
+      "produces": "results/breadth/breadth_verdict.json",
+      "audit": "scripts/breadth_verify.py, which re-derives every stored u_DW, lambda, D_sat and empirical c from the persisted state files"
+    },
+    {
+      "name": "pooled_entropy_stiffness_separation",
+      "driver": "scripts/breadth_separation.py",
+      "arguments": [],
+      "device": "cpu",
+      "produces": "results/breadth/pooled_separation.json"
+    },
+    {
+      "name": "chaos_closure_relations",
+      "driver": "scripts/chaos_relations.py",
+      "arguments": [],
+      "device": "cpu",
+      "produces": "results/chaos_relations/chaos_relations.json"
+    },
+    {
+      "name": "confined_film_stationarity_screen",
+      "driver": "scripts/slab_stationarity_gate.py",
+      "arguments": [],
+      "device": "gpu",
+      "produces": "results/confinement/slab_stationarity_gate.json",
+      "role": "go/no-go: a film whose cage is still growing over the cone horizon is disqualified before any twin is spent on it"
+    },
+    {
+      "name": "confined_film_twin_campaign",
+      "driver": "scripts/slab_cone_campaign.py",
+      "arguments": ["--fractions", "0.70", "0.50", "0.45", "0.35", "--out", "runs/slab_cone/shards/shard_all.json"],
+      "device": "gpu",
+      "produces": "the per-shard twin output that scripts/slab_cone_merge.py merges into results/confinement/slab_cone_merged.json"
+    },
+    {
+      "name": "matched_kick_bulk_control",
+      "driver": "scripts/slab_cone_campaign.py",
+      "arguments": ["--fractions", "--kick-clip-fraction", "0.35", "--out", "runs/slab_control/matched_clip_bulk.json"],
+      "device": "gpu",
+      "produces": "results/confinement/matched_clip_bulk_control.json",
+      "role": "same kick truncation as the narrowest film, no wall frozen, so the boundary is separated from the truncation"
+    },
+    {
+      "name": "figures",
+      "driver": "scripts/make_figures.py",
+      "arguments": [],
+      "device": "cpu",
+      "produces": "results/figures/*.png"
+    }
+  ]
+}
