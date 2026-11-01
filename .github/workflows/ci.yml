@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   replay:
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 45
     env:
       OMP_NUM_THREADS: 1

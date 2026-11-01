@@ -6,6 +6,8 @@ figure4_deep_rev  (a) measured lambda_B, D_sat/N and s_c against T, no
                   and for parents of different annealing T_f run at T = 0.075.
 figS1_fitwindows  every native revision run: D(t), the detected fit window, the
                   fitted line and its residuals, at both fit cadences.
+figS2_fronts      front radius r_front(t), the fitted line and its residuals, at both
+                  fit cadences; titles give v_b +- standard error over sites.
 
 Inputs (shipped): results/revision/bridge_front_corrected.json,
 results/revision/deep_T00xx_gardner_r0.json, results/revision/summary.json.
@@ -133,14 +135,19 @@ if __name__ == "__main__":
 
 
 def figS2():
-    """Front radius r_front(t) and the fitted line at both cadences, one parent per temperature."""
+    """Front radius r_front(t), the fitted line and its residuals at both cadences, one parent per
+    temperature.  Titles give v_b (mean +- standard error over the three sites) at each cadence;
+    the regression standard error of every individual slope is printed to stdout."""
     from butterfly_cone.perturb.butterfly import butterfly_velocity
     fs.use()
     temps = [0.150, 0.130, 0.108, 0.090, 0.075]
-    fig, axes = plt.subplots(1, len(temps), figsize=(1.6 * len(temps) + 0.6, 2.2), sharey=True)
-    for ax, T in zip(axes, temps):
+    fig, axes = plt.subplots(2, len(temps), figsize=(1.6 * len(temps) + 0.6, 3.4),
+                             gridspec_kw={"height_ratios": [2.2, 1]}, sharex="col", sharey="row")
+    for j, T in enumerate(temps):
+        ax, bot = axes[0, j], axes[1, j]
         z = np.load(REPO / f"runs/revision/native_T{T:.3f}_r0.npz")
         t, pos, box = z["times"], z["positions"], float(z["box"])
+        speeds = {4: [], 1: []}
         for k in range(3):
             field = z[f"field_{k}_abs"]
             for step, col, mk in ((4, fs.BLUE, "o"), (1, fs.VERMILLION, ".")):
@@ -151,11 +158,22 @@ def figS2():
                     i0 = v.onset.start_index
                     xs = tt[i0:i0 + v.n_fit]
                     ax.plot(xs, v.v_b * xs + v.r0, "-", color=col, lw=1.0)
+                    res = v.r_front[i0:i0 + v.n_fit] - (v.v_b * xs + v.r0)
+                    bot.plot(xs, res, "o-" if step == 4 else ".-", color=col, ms=2.5, lw=0.6)
+                    se = (np.sqrt(np.sum(res ** 2) / (xs.size - 2) / np.sum((xs - xs.mean()) ** 2))
+                          if xs.size > 2 else float("nan"))
+                    print(f"T={T:.3f} cadence={0.25 * step:.2f} site={k} v_b={v.v_b:.3f} "
+                          f"n={xs.size} slope_se={se:.3f}")
+                    speeds[step].append(v.v_b)
         ax.axhline(0.5 * box, color=fs.GUIDE, ls="--", lw=0.7)
         ax.set_xlim(0, 8)
-        ax.set_title(rf"$T={T:.3f}$", fontsize=fs.FS_ANNOT)
-        ax.set_xlabel(r"$t$ (t.u.)")
-    axes[0].set_ylabel(r"front radius $r_{\rm front}/\sigma$")
+        ms = {s: (np.mean(x), np.std(x, ddof=1) / np.sqrt(len(x))) for s, x in speeds.items()}
+        ax.set_title(rf"$T={T:.3f}$" + "\n" + f"{ms[4][0]:.2f}" + r"$\pm$" + f"{ms[4][1]:.2f}, "
+                     + f"{ms[1][0]:.2f}" + r"$\pm$" + f"{ms[1][1]:.2f}", fontsize=fs.FS_ANNOT)
+        bot.axhline(0, color=fs.GUIDE, lw=0.6)
+        bot.set_xlabel(r"$t$ (t.u.)")
+    axes[0, 0].set_ylabel(r"front radius $r_{\rm front}/\sigma$")
+    axes[1, 0].set_ylabel("residual\n" + r"($\sigma$)")
     fs.finalize(fig)
     fig.savefig(FIGS / "figS2_fronts.pdf")
     fig.savefig(FIGS / "figS2_fronts.png", dpi=200)
