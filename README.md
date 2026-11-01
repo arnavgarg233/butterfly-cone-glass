@@ -4,9 +4,11 @@ This project measures how fast a structural glass forgets its own microstate. De
 
 ## Headline results
 
-- The cone ceiling equals the Debye-Waller cage amplitude at `6` of `6` glass formers, `c` in `1.2347` to `1.2695` against `1.3029`.
-- Over `12` states the rate `lambda` tracks basin entropy at Pearson `r = +0.917` and stiffness at only `r = -0.469`.
-- Confinement holds the ceiling to `3.54` percent across `4` films, but anisotropy leaves bulk by `5.42` standard errors at `h = 4.01 sigma`.
+- The difference between the twins grows exponentially behind an advancing front and then stops at a ceiling with no free parameter, `D_sat/N = c* u_DW` with `c* = 4/sqrt(3 pi) = 1.3029`.
+- Tested particle by particle at fixed cage size, the identity holds to within `2` percent: the slope is `1.2806 +/- 0.0006` across four deep states, or `0.983 c*`. Aggregate ratios at ten states of six glass formers lie between `1.20` and `1.27`, below `c*`, as a spread of cage sizes requires.
+- Twins never kicked saturate at the same amplitude, independently equilibrated configurations separate more than three times further, and a harmonic replay transmits the kick without amplifying it.
+- Run at a common `T = 0.075`, parents annealed at `T_f = 0.150` to `0.075` give growth rates of `0.897` to `1.003`, against `0.897` to `1.469` at their own temperatures, so the rate mainly follows temperature. The ceiling follows the cage: `D_sat/N` rises from `0.147` to `0.220 sigma` as the cage amplitude rises from `0.119` to `0.223 sigma`.
+- Confinement to a `4.01 sigma` film lowers `D_sat/N` by `17.0` percent and the cage amplitude by `15.8` percent.
 
 ## Install and reproduce
 
@@ -27,6 +29,7 @@ The replay recomputes `83` of the `101` frozen values, re-reads `18`, runs the t
 - `configs/` and `data/`: claim surface and external-asset boundaries
 - `tests/`: automated checks
 - `results/`: retained tables, figures, and checksums
+- `results/revision/`: summary of the annealing and diameter-scaled kick runs added in the revision, made by `scripts/revision_*.py` and `scripts/figures/fig_revision.py`
 
 ## License
 
